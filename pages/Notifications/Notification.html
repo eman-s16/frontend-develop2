@@ -5492,22 +5492,22 @@ License: For each use you must have a valid license purchased only from above li
 											<li class="nav-item" role="presentation">
 												<a id="kt_activity_today_tab"
 													class="nav-link justify-content-center text-active-gray-800 "
-													data-bs-toggle="tab" role="tab" href="#kt_activity_today">Today</a>
+													data-bs-toggle="tab" role="tab" >Today</a>
 											</li>
 											<li class="nav-item" role="presentation">
 												<a id="kt_activity_week_tab"
 													class="nav-link justify-content-center text-active-gray-800"
-													data-bs-toggle="tab" role="tab" href="#kt_activity_week">Week</a>
+													data-bs-toggle="tab" role="tab">Week</a>
 											</li>
 											<li class="nav-item" role="presentation">
 												<a id="kt_activity_month_tab"
 													class="nav-link justify-content-center text-active-gray-800"
-													data-bs-toggle="tab" role="tab" href="#kt_activity_month">Month</a>
+													data-bs-toggle="tab" role="tab">Month</a>
 											</li>
 											<li class="nav-item" role="presentation">
 												<a id="kt_activity_year_tab"
 													class="nav-link justify-content-center text-active-gray-800 text-hover-gray-800"
-													data-bs-toggle="tab" role="tab" href="#kt_activity_year">2023</a>
+													data-bs-toggle="tab" role="tab">2023</a>
 											</li>
 										</ul>
 										<!--end::Tab nav-->
@@ -5555,7 +5555,7 @@ License: For each use you must have a valid license purchased only from above li
 																		data-pl="pl-address-detail">
 																		<div class="pl-address-item__head"><span
 																				class="fs-bold "
-																				id="navigition-title">Add New Order
+																				id="navigition-title">EDIT New Order
 																			</span></div>
 																		<div id="navigition-description">new Order
 																			Number #123 Added</div>
@@ -5668,50 +5668,39 @@ License: For each use you must have a valid license purchased only from above li
 			</div>
 			<!--end::Page-->
 		</div>
-		<script>
-			// Get all the set as default buttons
-			const setDefaultButtons = document.querySelectorAll('.set-default-btn');
+	<script>
+		
+    function searchAndFilterCards() {
+        // Get input value
+        const searchValue = document.getElementById('searchInput').value.toLowerCase();
+        // Get all timeline cards
+        const cards = document.querySelectorAll('.timeline-card');
 
-			// Iterate through each button and add click event listener
-			setDefaultButtons.forEach(button => {
-				button.addEventListener('click', function (event) {
-					event.preventDefault();
+        cards.forEach(card => {
+            // Get card title and description
+            const title = card.querySelector('#navigition-title').innerText.toLowerCase();
+            const description = card.querySelector('#navigition-description').innerText.toLowerCase();
 
-					// Get the parent address card
-					const addressCard = this.closest('.timeline-card');
+            // Show/hide card based on search criteria
+            if (title.includes(searchValue) || description.includes(searchValue)) {
+                card.style.display = 'block'; // Show card
+            } else {
+                card.style.display = 'none'; // Hide card
+            }
+        });
+    }
 
-					// Check if this address is already the default one
-					const isAlreadyDefault = addressCard.querySelector('.badge').classList.contains('show-default');
-
-					// Remove 'Default' badge from all address cards and hide 'Set as default' button
-					document.querySelectorAll('.badge').forEach(badge => {
-						badge.classList.add('d-none'); // Hide all 'Default' badges
-					});
-
-					document.querySelectorAll('.set-default-btn').forEach(btn => {
-						btn.classList.remove('d-none'); // Show all 'Set as default' buttons
-					});
-
-					// Show 'Set as default' button for the selected address
-					this.classList.add('d-none');
-
-					// Remove 'Default' status if another address was already default
-					if (!isAlreadyDefault) {
-						// Add 'Default' badge to the clicked address card
-						const defaultBadge = addressCard.querySelector('.badge');
-						defaultBadge.classList.remove('d-none'); // Show 'Default' badge for clicked item
-					}
-
-					// Move the clicked address card to the top of the list
-					const timeline = document.querySelector('.timeline'); // Assuming a parent container with class 'timeline'
-					timeline.prepend(addressCard);
-				});
-			});
-
-
-
-
-		</script>
+    // You can add event listeners to handle tab clicks and filtering based on dates
+    // For example:
+    const tabs = document.querySelectorAll('.nav-tabs .nav-link');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // Logic to filter timeline cards based on the selected tab (by date)
+            // Implement date filtering logic here
+        });
+    });
+</script>
+		
 		<div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
 			<!--begin::Modal dialog-->
 			<div class="modal-dialog modal-dialog-centered mw-1000px">
