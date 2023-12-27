@@ -5190,7 +5190,7 @@ License: For each use you must have a valid license purchased only from above li
 												</div>
 												<!--end::Image input-->
 												<!--begin::Description-->
-												<div class="text-muted fs-7">Set the category thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+												<div class="text-muted fs-7">Only *.png, *.jpg and *.jpeg image files are accepted</div>
 												<!--end::Description-->
 											</div>
 											<!--end::Card body-->
@@ -5199,37 +5199,45 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Status-->
 										<div class="card card-flush py-4">
 											<!--begin::Card header-->
-											<div class="card-header">
-												<!--begin::Card title-->
-												<div class="card-title">
-													<h2>Status</h2>
-												</div>
-												<!--end::Card title-->
-												<!--begin::Card toolbar-->
-												<div class="card-toolbar">
-													<div class="rounded-circle bg-success w-15px h-15px" id="kt_ecommerce_add_category_status"></div>
-												</div>
-												<!--begin::Card toolbar-->
-											</div>
+											
 											<!--end::Card header-->
 											<!--begin::Card body-->
 											<div class="card-body pt-0">
-												<!--begin::Select2-->
-												<select class="form-select mb-2" data-control="select2" data-hide-search="true" data-placeholder="Select an option" id="kt_ecommerce_add_category_status_select">
+												
+												<label class="form-label">User</label>
+												<select class="form-select " data-control="select2"  data-placeholder="Select an option" >
 													<option></option>
-													<option value="published" selected="selected">Published</option>
-													<option value="scheduled">Scheduled</option>
-													<option value="unpublished">Unpublished</option>
+													<option value="Eman" selected="selected">Eman</option>
+													<option value="Asma">Asma</option>
+													<option value="Omar">Omar</option>
 												</select>
-												<!--end::Select2-->
-												<!--begin::Description-->
-												<div class="text-muted fs-7">Set the category status.</div>
-												<!--end::Description-->
-												<!--begin::Datepicker-->
-												<div class="d-none mt-10">
-													<label for="kt_ecommerce_add_category_status_datepicker" class="form-label">Select publishing date and time</label>
-													<input class="form-control" id="kt_ecommerce_add_category_status_datepicker" placeholder="Pick date & time" />
-												</div>
+
+												
+											</div>
+											<div class="card-body pt-0">
+												
+												<label class="form-label">Location</label>
+												<select class="form-select " data-control="select2"  data-placeholder="Select an option" 
+													<option></option>
+													<option value="Nizwa" selected="selected">Nizwa</option>
+													<option value="Sur">Sur</option>
+													
+												</select>
+												
+											
+											
+									
+											</div>
+											<div class="card-body pt-0">
+												
+												<label class="form-label">Merchant</label>
+												<select class="form-select " data-control="select2"  data-placeholder="Select an option" >
+													<option></option>
+													<option value="Eman" selected="selected">Eman</option>
+													<option value="Asma">Asma</option>
+													<option value="Omar">Omar</option>
+												</select>
+												
 												<!--end::Datepicker-->
 											</div>
 											<!--end::Card body-->
@@ -5272,7 +5280,7 @@ License: For each use you must have a valid license purchased only from above li
 													<label class="form-label">Description</label>
 													<!--end::Label-->
 													<!--begin::Editor-->
-													<div id="kt_ecommerce_add_category_description" name="kt_ecommerce_add_category_description" class="min-h-200px mb-2"></div>
+													<div id="kt_ecommerce_add_category_description" name="kt_ecommerce_add_category_description" class="min-h-300px mb-2"></div>
 													<!--end::Editor-->
 													<!--begin::Description-->
 													<div class="text-muted fs-7">Set a description to the Branch for better visibility.</div>
