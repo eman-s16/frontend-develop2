@@ -5482,34 +5482,29 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Toolbar-->
 									<div class="card-toolbar m-0">
 										<!--begin::Tab nav-->
-										<ul class="nav nav-tabs nav-line-tabs nav-stretch fs-6 border-0 fw-bold"
-											role="tablist">
-											<li class="nav-item" role="presentation">
-												<a id="kt_activity_today_tab"
-													class="nav-link justify-content-center text-active-gray-800 active"
-													data-bs-toggle="tab" role="tab">ALL</a>
-											</li>
-											<li class="nav-item" role="presentation">
-												<a id="kt_activity_today_tab"
-													class="nav-link justify-content-center text-active-gray-800 "
-													data-bs-toggle="tab" role="tab" >Today</a>
-											</li>
-											<li class="nav-item" role="presentation">
-												<a id="kt_activity_week_tab"
-													class="nav-link justify-content-center text-active-gray-800"
-													data-bs-toggle="tab" role="tab">Week</a>
-											</li>
-											<li class="nav-item" role="presentation">
-												<a id="kt_activity_month_tab"
-													class="nav-link justify-content-center text-active-gray-800"
-													data-bs-toggle="tab" role="tab">Month</a>
-											</li>
-											<li class="nav-item" role="presentation">
-												<a id="kt_activity_year_tab"
-													class="nav-link justify-content-center text-active-gray-800 text-hover-gray-800"
-													data-bs-toggle="tab" role="tab">2023</a>
-											</li>
-										</ul>
+										<ul class="nav nav-tabs nav-line-tabs nav-stretch fs-6 border-0 fw-bold" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a id="kt_activity_all_tab" class="nav-link justify-content-center text-active-gray-800 active"
+            data-bs-toggle="tab" role="tab" onclick="filterByDate('all')">ALL</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a id="kt_activity_today_tab" class="nav-link justify-content-center text-active-gray-800"
+            data-bs-toggle="tab" role="tab" onclick="filterByDate('today')">Today</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a id="kt_activity_week_tab" class="nav-link justify-content-center text-active-gray-800"
+            data-bs-toggle="tab" role="tab" onclick="filterByDate('week')">Week</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a id="kt_activity_month_tab" class="nav-link justify-content-center text-active-gray-800"
+            data-bs-toggle="tab" role="tab" onclick="filterByDate('month')">Month</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a id="kt_activity_year_tab" class="nav-link justify-content-center text-active-gray-800 text-hover-gray-800"
+            data-bs-toggle="tab" role="tab" onclick="filterByDate('2024')">2024</a>
+    </li>
+</ul>
+
 										<!--end::Tab nav-->
 									</div>
 									<!--end::Toolbar-->
@@ -5553,8 +5548,8 @@ License: For each use you must have a valid license purchased only from above li
 
 																	<div class="pl-address-item__content-wrap large"
 																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head"><span
-																				class="fs-bold "
+																		<div class="pl-address-item__head fw-bold fs-4"><span
+																				
 																				id="navigition-title">EDIT New Order
 																			</span></div>
 																		<div id="navigition-description">new Order
@@ -5581,7 +5576,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<span class="path4"></span>
 																		<span class="path5"></span>
 																		<span class="path6"></span>
-																	</i> <span id="navigition-date" navigition-date="2023-12-25 12:22">3 h ago</span>
+																	</i> <span id="navigition-date" navigition-date="2023-1-9 12:22">2024-1-9</span>
 																</span>
 
 															</div>
@@ -5607,7 +5602,7 @@ License: For each use you must have a valid license purchased only from above li
 
 																	<div class="pl-address-item__content-wrap large"
 																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head"><span
+																		<div class="pl-address-item__head fw-bold fs-4"><span
 																				class="fs-bold "
 																				id="navigition-title">Add New Order
 																			</span></div>
@@ -5632,7 +5627,7 @@ License: For each use you must have a valid license purchased only from above li
 																		<span class="path4"></span>
 																		<span class="path5"></span>
 																		<span class="path6"></span>
-																	</i> <span id="navigition-date" navigition-date="2023-12-25 12:22">3 h ago</span>
+																	</i> <span id="navigition-date" navigition-date="2023-12-25 12:22">2023-12-25</span>
 																</span>
 
 															</div>
@@ -5690,15 +5685,42 @@ License: For each use you must have a valid license purchased only from above li
         });
     }
 
-    // You can add event listeners to handle tab clicks and filtering based on dates
-    // For example:
-    const tabs = document.querySelectorAll('.nav-tabs .nav-link');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            // Logic to filter timeline cards based on the selected tab (by date)
-            // Implement date filtering logic here
-        });
+    function filterByDate(dateFilter) {
+    const cards = document.querySelectorAll('.timeline-card');
+    const currentDate = new Date();
+
+    cards.forEach(card => {
+       
+		const cardDateStr = card.querySelector('#navigition-date').getAttribute('navigition-date');
+		const cardDate = new Date(cardDateStr);
+
+        let showCard = true;
+        if (dateFilter === 'all') {
+            showCard = true;
+        } else if (dateFilter === 'today') {
+            showCard = cardDate.toDateString() === currentDate.toDateString();
+        } else if (dateFilter === 'week') {
+            const currentWeekStart = new Date(currentDate);
+            currentWeekStart.setDate(currentDate.getDate() - currentDate.getDay());
+            const currentWeekEnd = new Date(currentWeekStart);
+            currentWeekEnd.setDate(currentWeekStart.getDate() + 6);
+
+            showCard = cardDate >= currentWeekStart && cardDate <= currentWeekEnd;
+        } else if (dateFilter === 'month') {
+            showCard = cardDate.getMonth() === currentDate.getMonth() && cardDate.getFullYear() === currentDate.getFullYear();
+        } else {
+            const selectedYear = parseInt(dateFilter);
+            showCard = cardDate.getFullYear() === selectedYear;
+        }
+
+        if (!showCard) {
+            card.style.display = 'none';
+        } else {
+            card.style.display = 'block';
+        }
     });
+}
+
 </script>
 		
 		<div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
@@ -6235,77 +6257,7 @@ License: For each use you must have a valid license purchased only from above li
 		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
-		<script>
-			const currentYear = new Date().getFullYear();
-			document.getElementById('yearTab').innerText = currentYear;
-
-			function handleFilterClick(event, filter) {
-				event.preventDefault();
-
-				const activeLinks = document.querySelectorAll('.nav-link');
-				activeLinks.forEach(link => link.classList.remove('active'));
-
-				event.currentTarget.classList.add('active');
-
-				filterCards(filter);
-			}
-
-			function filterCards(filter) {
-				const cards = document.querySelectorAll('.timeline-card');
-
-				const currentDate = new Date();
-
-				cards.forEach(card => {
-					const cardDate = new Date(card.getAttribute('card-date'));
-
-					let showCard = true;
-					if (filter === 'all') {
-						showCard = true;
-					}
-					else if (filter === 'today') {
-						showCard = cardDate.toDateString() === currentDate.toDateString();
-					} else if (filter === 'week') {
-						const currentWeekStart = new Date(currentDate);
-						currentWeekStart.setDate(currentDate.getDate() - currentDate.getDay());
-						const currentWeekEnd = new Date(currentWeekStart);
-						currentWeekEnd.setDate(currentWeekStart.getDate() + 6);
-
-						showCard = cardDate >= currentWeekStart && cardDate <= currentWeekEnd;
-					} else if (filter === 'month') {
-						showCard = cardDate.getMonth() === currentDate.getMonth() && cardDate.getFullYear() === currentDate.getFullYear();
-					} else if (filter === 'year') {
-						showCard = cardDate.getFullYear() === currentDate.getFullYear();
-					}
-
-					if (!showCard) {
-						card.classList.remove('d-block');
-						card.classList.add('d-none');
-					} else {
-						card.classList.remove('d-none');
-						card.classList.add('d-block');
-					}
-				});
-			}
-			function searchCards() {
-				// Get the search input value
-				var searchValue = document.getElementById('searchInput').value.toLowerCase();
-
-				// Get all cards in the container
-				var cards = document.getElementById('cardsContainer').getElementsByClassName('timeline-card');
-
-				// Loop through each card and show/hide based on the search input
-				for (var i = 0; i < cards.length; i++) {
-					var cardName = cards[i].querySelector('.nav-message').innerText.toLowerCase();
-					if (cardName.indexOf(searchValue) !== -1) {
-						cards[i].classList.remove('d-none');
-						cards[i].classList.add('d-block');
-					} else {
-						cards[i].classList.remove('d-block');
-						cards[i].classList.add('d-none');
-					}
-				}
-			}
-		</script>
+		
 </body>
 <!--end::Body-->
 

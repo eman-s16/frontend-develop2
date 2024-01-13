@@ -16,7 +16,7 @@ License: For each use you must have a valid license purchased only from above li
 
 <head>
 	<base href="../../" />
-	<title>Metronic - The World's #1 Selling Bootstrap Admin Template by Keenthemes</title>
+	<title>Send Package</title>
 	<meta charset="utf-8" />
 	<meta name="description"
 		content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
@@ -5590,100 +5590,37 @@ License: For each use you must have a valid license purchased only from above li
 																<input type="number"
 																	class="form-control form-control-solid w-100 px-12"
 																	placeholder="Weight">
-																<h6 class="position-absolute me-4 end-0">Kg</h6>
+																<h6 class="position-absolute me-4 end-0 m-0">Kg</h6>
 
 															</div>
 														</div>
 														<!--end::Timeline content-->
 													</div>
 													<div class="timeline-item align-items-center mt-2">
-    <div class="timeline-content m-0">
-        <label class="form-label d-block m-0">Package Quantity</label>
-        <div class="d-flex  position-relative  form-control form-control-solid w-100 justify-content-between">
-			<div>
-				<h6 class="position-absolute ">Kg</h6>
-				</div>
-         <div class="d-flex  justify-content-around">
-			<button class="btn btn-outline-secondary minus-circle " type="button" id="decrease-btn">
-                   -
-                </button>
-				
-                <input type="number" id="package-quantity" value="1" min="1">
-                <button class="btn btn-outline-secondary plus-circle" type="button" id="increase-btn">
-                   +
-                </button>
-			</div>
-           
-                
-      
-        </div>
-    </div>
-</div>
 
-<style>
-    .quality-image {
-        width: 50px; /* Adjust the size of the quality image */
-        height: 50px;
-    }
-    .plus-circle,
-    .minus-circle {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        font-weight: bold;
-    }
 
-    .plus-circle {
-        background-color: blue;
-        color: white;
-      
-    }
+														<div class="timeline-content m-0">
+															<label class="form-label d-block m-0">Package
+																Quantity</label>
+															<div
+																class="d-flex flex-row align-items-center position-relative my-1 ">
+																<i
+																	class="ki-duotone ki-package fs-3 position-absolute ms-4">
+																	<span class="path1"></span>
+																	<span class="path2"></span>
+																	<span class="path3"></span>
+																</i>
+																<input type="number"
+																	class="form-control form-control-solid w-100 ps-12"
+																	placeholder="Package"
+																	style="padding-right: 6rem!important;">
+																<h6 class="position-absolute me-4 end-0 m-0"> Package
+																</h6>
 
-    .minus-circle {
-        background-color: pink;
-        color: white;
-        
-    }
-    .plus-icon {
-        fill: blue; /* Adjust the color of the plus icon */
-    }
-	#package-quantity{
-		width: 40px;
-   		 text-align: center;
-	}
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-    input[type="number"] {
-        -moz-appearance: textfield;
-    }
-</style>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const decreaseBtn = document.getElementById('decrease-btn');
-        const increaseBtn = document.getElementById('increase-btn');
-        const packageQuantityInput = document.getElementById('package-quantity');
-
-        decreaseBtn.addEventListener('click', function() {
-            let currentValue = parseInt(packageQuantityInput.value);
-            if (currentValue > 1) {
-                packageQuantityInput.value = currentValue - 1;
-            }
-        });
-
-        increaseBtn.addEventListener('click', function() {
-            let currentValue = parseInt(packageQuantityInput.value);
-            packageQuantityInput.value = currentValue + 1;
-        });
-    });
-</script>
+															</div>
+														</div>
+														<!--end::Timeline content-->
+													</div>
 
 
 
