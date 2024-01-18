@@ -16,7 +16,7 @@ License: For each use you must have a valid license purchased only from above li
 
 <head>
 	<base href="../../" />
-	<title>Metronic - The World's #1 Selling Bootstrap Admin Template by Keenthemes</title>
+	<title>My Orders</title>
 	<meta charset="utf-8" />
 	<meta name="description"
 		content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
@@ -5416,7 +5416,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Page title-->
 							<div class="page-title d-flex flex-column me-5 py-2">
 								<!--begin::Title-->
-								<h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Shipping Address</h1>
+								<h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">My Orders</h1>
 								<!--end::Title-->
 								<!--begin::Breadcrumb-->
 								<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
@@ -5431,7 +5431,7 @@ License: For each use you must have a valid license purchased only from above li
 									</li>
 									<!--end::Item-->
 									<!--begin::Item-->
-									<li class="breadcrumb-item text-muted">Settings</li>
+									<li class="breadcrumb-item text-muted">User-Orders</li>
 									<!--end::Item-->
 									<!--begin::Item-->
 									<li class="breadcrumb-item">
@@ -5439,7 +5439,7 @@ License: For each use you must have a valid license purchased only from above li
 									</li>
 									<!--end::Item-->
 									<!--begin::Item-->
-									<li class="breadcrumb-item text-dark">Shipping Address</li>
+									<li class="breadcrumb-item text-dark">My Orders</li>
 									<!--end::Item-->
 								</ul>
 								<!--end::Breadcrumb-->
@@ -5462,16 +5462,53 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Timeline-->
 							<div class="card">
 								<!--begin::Card head-->
-								<div class="card-header card-header-stretch justify-content-end">
+								<div class="card-header card-header-stretch">
 									<!--begin::Title-->
-									<div class="d-flex align-items-center">
 
-										<a data-bs-toggle="modal" data-bs-target="#kt_modal_offer_a_deal"
-											class="btn btn-primary  border-0 px-3 px-lg-6">New Address</a>
+
+
+									<div class="d-flex align-items-center position-relative my-1">
+										<i class="ki-duotone ki-magnifier fs-3 position-absolute ms-4">
+											<span class="path1"></span>
+											<span class="path2"></span>
+										</i>
+										<input type="text" id="searchInput" onkeyup="searchAndFilterCards()"
+											class="form-control form-control-solid w-250px ps-12"
+											placeholder="Search...">
+
 
 									</div>
 									<!--end::Title-->
-
+									<!--begin::Toolbar-->
+									<div class="card-toolbar m-0">
+										<!--begin::Tab nav-->
+										
+											<div class="d-flex align-items-center position-relative my-1" data-kt-customer-table-toolbar="base">
+									
+												<div class="w-250px me-3">
+													<!--begin::Select2-->
+													<select class="form-select form-select-solid " data-control="select2"  data-placeholder="Status" 
+													onchange="filterTable(this.value)"
+													data-kt-ecommerce-order-filter="status">
+														<option></option>
+														<option value="all">All</option>
+													<option value="Open">Open</option>
+															<option value="Pick">Pick</option>
+															<option value="Cancel">Cancel</option>
+															<option value="Waiting">Waiting</option>
+															<option value="Delivered">Delivered</option>
+															<option value="Returned">Returned</option>
+															<option value="Delete">Delete</option>
+													</select>
+														
+													
+											
+										
+											</div>
+										</div>
+										<!--end::Tab nav-->
+									</div>
+									<!--end::Toolbar-->
 								</div>
 								<!--end::Card head-->
 								<!--begin::Card body-->
@@ -5481,60 +5518,11 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Tab panel-->
 										<div class="card-body p-0 tab-pane fade show active" role="tabpanel">
 											<!--begin::Timeline-->
-											<div class="timeline">
+											<div class="timeline" >
 												<!--begin::Timeline item-->
 												<div class=" overflow-auto pb-5" id="cardsContainer">
 													<!--begin::Record-->
-													<div class="timeline-card">
-														<div
-															class="  d-flex align-items-center justify-content-between border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
-															<div class="d-flex align-items-center">
-																<div class="fs-2x rounded-circle circle-div">
-																	<i
-																		class="ki-duotone fs-1 ki-geolocation-home text-primary">
-																		<span class="path1"></span>
-																		<span class="path2"></span>
-																	</i>
-																</div>
 
-																<div class="ms-4">
-
-																	<div class="pl-address-item__content-wrap large"
-																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head"><span
-																				class="pl-address-item__head__bold"
-																				id="name">Marry, </span><span
-																				id="phone">+968
-																				443388776</span></div>
-																		<div id="address">sur</div>
-																		<div id="sec-address">Oman
-																		</div>
-																		<div class="badge badge-light-danger show-default"
-																			id="defaultBadge">Default</div>
-
-																	</div>
-
-
-																</div>
-															</div>
-
-
-
-
-															<div class=" d-flex flex-column align-items-end ">
-
-																<a href="pages/settings/edit-address.html"
-																	class="btn btn-link  p-0 text-primary"
-																	data-bs-toggle="modal"
-																	data-bs-target="#kt_modal_offer_a_deal">Edit</a>
-
-																<a
-																	class="btn btn-link  p-0 text-primary set-default-btn d-none ">Set
-																	as default</a>
-
-															</div>
-														</div>
-													</div>
 													<style>
 														.circle-div {
 															width: 50px;
@@ -5545,15 +5533,16 @@ License: For each use you must have a valid license purchased only from above li
 															justify-content: center;
 														}
 													</style>
-													<div class="timeline-card">
-														<div
-															class="  d-flex align-items-center justify-content-between border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
+													<a href="pages/User-Order/order-details.html">
+														<div class="timeline-card">
+														<div class=" border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
+														<div class="d-flex align-items-center justify-content-between">
 															<div class="d-flex align-items-center">
 																<div class="fs-2x rounded-circle circle-div">
-																	<i
-																		class="ki-duotone fs-1 ki-geolocation-home text-primary">
+																	<i class="ki-duotone fs-1 ki-cube-2 text-danger">
 																		<span class="path1"></span>
 																		<span class="path2"></span>
+																		<span class="path3"></span>
 																	</i>
 																</div>
 
@@ -5561,49 +5550,51 @@ License: For each use you must have a valid license purchased only from above li
 
 																	<div class="pl-address-item__content-wrap large"
 																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head"><span
-																				class="pl-address-item__head__bold"
-																				id="name">Reem, </span><span
-																				id="phone">+968
-																				44332211</span></div>
-																		<div id="address">samail</div>
-																		<div id="sec-address">Oman
-																		</div>
-																		<div class="badge badge-light-danger d-none"
-																			id="defaultBadge">Default</div>
+																		<div class="pl-address-item__head text-Secondary ">
+																			Shipped To <div id="order-name" class="text-danger fs-3 fw-bold ">Eman</div>
+																			
+																			</div>
+																			
+																		
+
+
 																	</div>
 
 
 																</div>
+																
 															</div>
-
-
-
-
 															<div class=" d-flex flex-column align-items-end ">
-
-																<a href="pages/settings/edit-address.html"
-																	class="btn btn-link  p-0 text-primary"
-																	data-bs-toggle="modal"
-																	data-bs-target="#kt_modal_offer_a_deal">Edit</a>
-
-																<a
-																	class="btn btn-link  p-0 text-primary set-default-btn">Set
-																	as default</a>
-
+																<span class="badge border rounded-pill border-2 border-dark text-dark px-5 py-2 fs-5 fw-bold" id="order-status">
+																	Cancel
+																</span>
+																
 															</div>
+														</div>
+														<div class="mt-1">
+															<div class="fw-bold">Order Id: <span
+																				class="fw-normal"
+																				id="order-Id">#1234321344</span>
+															</div>
+															<div class="fw-bold">Order Date: <span
+																				class="fw-normal"
+																				id="order-date">12-12-2023</span>
+															</div>
+														</div>
 														</div>
 
 													</div>
-													<div class="timeline-card">
-														<div
-															class="  d-flex align-items-center justify-content-between border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
+													</a>	
+													<a href="pages/User-Order/order-details.html">
+														<div class="timeline-card">
+														<div class=" border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
+														<div class="d-flex align-items-center justify-content-between">
 															<div class="d-flex align-items-center">
 																<div class="fs-2x rounded-circle circle-div">
-																	<i
-																		class="ki-duotone fs-1 ki-geolocation-home text-primary">
+																	<i class="ki-duotone fs-1 ki-cube-2 text-danger">
 																		<span class="path1"></span>
 																		<span class="path2"></span>
+																		<span class="path3"></span>
 																	</i>
 																</div>
 
@@ -5611,763 +5602,640 @@ License: For each use you must have a valid license purchased only from above li
 
 																	<div class="pl-address-item__content-wrap large"
 																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head"><span
-																				class="pl-address-item__head__bold"
-																				id="name">Rashid, </span><span
-																				id="phone">+968
-																				54332231</span></div>
-																		<div id="address">Sur</div>
-																		<div id="sec-address">Oman
-																		</div>
-																		<div class="badge badge-light-danger d-none"
-																			id="defaultBadge">Default</div>
+																		<div class="pl-address-item__head text-Secondary ">
+																			Shipped To <div id="order-name" class="text-danger fs-3 fw-bold ">Asma</div>
+																			
+																			</div>
+																			
+																		
+
+
 																	</div>
 
 
 																</div>
+																
 															</div>
-
-
-
-
 															<div class=" d-flex flex-column align-items-end ">
-
-																<a href="pages/settings/edit-address.html"
-																	class="btn btn-link  p-0 text-primary"
-																	data-bs-toggle="modal"
-																	data-bs-target="#kt_modal_offer_a_deal">Edit</a>
-
-																<a
-																	class="btn btn-link  p-0 text-primary set-default-btn">Set
-																	as default</a>
-
+																<span class="badge border rounded-pill border-2 border-primary text-primary px-5 py-2 fs-5 fw-bold" id="order-status">
+																	Pick
+																</span>
+																
 															</div>
+														</div>
+														<div class="mt-1">
+															<div class="fw-bold">Order Id: <span
+																				class="fw-normal"
+																				id="order-Id">#99887766</span>
+															</div>
+															<div class="fw-bold">Order Date: <span
+																				class="fw-normal"
+																				id="order-date">01-01-2024</span>
+															</div>
+														</div>
 														</div>
 
 													</div>
-													<div class="timeline-card">
-														<div
-															class="  d-flex align-items-center justify-content-between border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
-															<div class="d-flex align-items-center">
-																<div class="fs-2x rounded-circle circle-div">
-																	<i
-																		class="ki-duotone fs-1 ki-geolocation-home text-primary">
-																		<span class="path1"></span>
-																		<span class="path2"></span>
-																	</i>
-																</div>
-
-																<div class="ms-4">
-
-																	<div class="pl-address-item__content-wrap large"
-																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head"><span
-																				class="pl-address-item__head__bold"
-																				id="name">Ali, </span><span
-																				id="phone">+968
-																				48753221</span></div>
-																		<div id="address">samail</div>
-																		<div id="sec-address">Oman
-																		</div>
-																		<div class="badge badge-light-danger d-none"
-																			id="defaultBadge">Default</div>
-																	</div>
-
-
-																</div>
-															</div>
-
-
-
-
-															<div class=" d-flex flex-column align-items-end ">
-
-																<a href="pages/settings/edit-address.html"
-																	class="btn btn-link  p-0 text-primary"
-																	data-bs-toggle="modal"
-																	data-bs-target="#kt_modal_offer_a_deal">Edit</a>
-
-																<a
-																	class="btn btn-link  p-0 text-primary set-default-btn">Set
-																	as default</a>
-
-															</div>
-														</div>
-
-													</div>
-
-													<!--end::Record-->
+														</a>	
+													
+													
+													
 												</div>
-
-
+												<!--end::Timeline-->
 											</div>
-											<!--end::Timeline-->
+											<!--end::Tab panel-->
+											<!--begin::Tab panel-->
+
+											<!--end::Tab panel-->
 										</div>
-										<!--end::Tab panel-->
-										<!--begin::Tab panel-->
-
-										<!--end::Tab panel-->
+										<!--end::Tab Content-->
 									</div>
-									<!--end::Tab Content-->
+									<!--end::Card body-->
 								</div>
-								<!--end::Card body-->
+								<!--end::Timeline-->
 							</div>
-							<!--end::Timeline-->
+							<!--end::Container-->
 						</div>
-						<!--end::Container-->
+						<!--end::Post-->
 					</div>
-					<!--end::Post-->
+					<!--end::Content-->
+
 				</div>
-				<!--end::Content-->
-
+				<!--end::Wrapper-->
 			</div>
-			<!--end::Wrapper-->
+			<!--end::Page-->
 		</div>
-		<!--end::Page-->
-	</div>
-	<script>
-		// Get all the set as default buttons
-		const setDefaultButtons = document.querySelectorAll('.set-default-btn');
+		<script>
+			function searchAndFilterCards() {
+    const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.getElementById('cardsContainer').querySelectorAll('.timeline-card');
 
-		// Iterate through each button and add click event listener
-		setDefaultButtons.forEach(button => {
-			button.addEventListener('click', function (event) {
-				event.preventDefault();
+    cards.forEach(card => {
+        const title = card.querySelector('#order-name').innerText.toLowerCase();
+        const orderId = card.querySelector('#order-Id').innerText.toLowerCase();
+		const orderDate = card.querySelector('#order-date').innerText.toLowerCase();
+        const status = card.querySelector('.badge').innerText.toLowerCase(); // Assuming status is inside a '.badge' element
 
-				// Get the parent address card
-				const addressCard = this.closest('.timeline-card');
+        if (title.includes(searchValue) || orderId.includes(searchValue) || status.includes(searchValue) || orderDate.includes(searchValue)) {
+            card.style.display = 'block'; // Show card
+        } else {
+            card.style.display = 'none'; // Hide card
+        }
+    });
+}
+function filterTable(selectedStatus) {
+    const cards = document.querySelectorAll('.timeline-card');
 
-				// Check if this address is already the default one
-				const isAlreadyDefault = addressCard.querySelector('.badge').classList.contains('show-default');
+    cards.forEach(card => {
+        const cardStatus = card.querySelector('.badge').textContent.trim().toLowerCase();
 
-				// Remove 'Default' badge from all address cards and hide 'Set as default' button
-				document.querySelectorAll('.badge').forEach(badge => {
-					badge.classList.add('d-none'); // Hide all 'Default' badges
-				});
-
-				document.querySelectorAll('.set-default-btn').forEach(btn => {
-					btn.classList.remove('d-none'); // Show all 'Set as default' buttons
-				});
-
-				// Show 'Set as default' button for the selected address
-				this.classList.add('d-none');
-
-				// Remove 'Default' status if another address was already default
-				if (!isAlreadyDefault) {
-					// Add 'Default' badge to the clicked address card
-					const defaultBadge = addressCard.querySelector('.badge');
-					defaultBadge.classList.remove('d-none'); // Show 'Default' badge for clicked item
-				}
-
-				// Move the clicked address card to the top of the list
-				const timeline = document.querySelector('.timeline'); // Assuming a parent container with class 'timeline'
-				timeline.prepend(addressCard);
-			});
-		});
+        if (selectedStatus === 'all' || cardStatus === selectedStatus.toLowerCase()) {
+            card.style.display = 'block'; // Show card
+        } else {
+            card.style.display = 'none'; // Hide card
+        }
+    });
+}
 
 
+		
+		</script>
 
+		<div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
+			<!--begin::Modal dialog-->
+			<div class="modal-dialog modal-dialog-centered mw-1000px">
+				<!--begin::Modal content-->
+				<div class="modal-content">
+					<!--begin::Modal header-->
+					<div class="modal-header py-7 d-flex justify-content-between">
+						<!--begin::Modal title-->
+						<h2>Edit/Add Shipping Address</h2>
+						<!--end::Modal title-->
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+							<i class="ki-duotone ki-cross fs-1">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</i>
+						</div>
 
-	</script>
-	<div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
-		<!--begin::Modal dialog-->
-		<div class="modal-dialog modal-dialog-centered mw-1000px">
-			<!--begin::Modal content-->
-			<div class="modal-content">
-				<!--begin::Modal header-->
-				<div class="modal-header py-7 d-flex justify-content-between">
-					<!--begin::Modal title-->
-					<h2>Edit/Add Shipping Address</h2>
-					<!--end::Modal title-->
-					<!--begin::Close-->
-					<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
-						<i class="ki-duotone ki-cross fs-1">
-							<span class="path1"></span>
-							<span class="path2"></span>
-						</i>
 					</div>
 
+					<div class="modal-body scroll-y m-5">
+
+
+
+						<form id="kt_account_profile_details_form" class="form">
+
+							<div class="card-body  p-9">
+
+
+								<div class="row mb-6">
+									<div class="col-md-6 row mb-6">
+										<!--begin::Label-->
+										<label class="col-lg-4 col-form-label required fw-semibold fs-6">Name</label>
+										<!--end::Label-->
+										<!--begin::Col-->
+										<div class="col-lg-8">
+											<!--begin::Row-->
+											<div class="row">
+
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="fv-row">
+													<input type="text" name="lname"
+														class="form-control form-control-lg form-control-solid"
+														placeholder="Last name" value="Smith" />
+												</div>
+												<!--end::Col-->
+											</div>
+											<!--end::Row-->
+										</div>
+										<!--end::Col-->
+									</div>
+									<!--end::Input group-->
+
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="col-md-6 row mb-6">
+										<!--begin::Label-->
+										<label class="col-lg-4 col-form-label fw-semibold fs-6">
+											<span class="required">Phone</span>
+
+										</label>
+										<!--end::Label-->
+										<!--begin::Col-->
+										<div class="col-lg-8 fv-row">
+											<input type="tel" name="phone"
+												class="form-control form-control-lg form-control-solid"
+												placeholder="Phone number" value="044 3276 454 935" />
+										</div>
+										<!--end::Col-->
+									</div>
+								</div>
+								<!--end::Input group-->
+
+								<!--begin::Input group-->
+
+								<div class="row mb-6">
+									<div class="col-md-6 row mb-6">
+										<!--begin::Label-->
+										<label
+											class="col-lg-4 col-form-label required fw-semibold fs-6">Country/Region</label>
+										<!--end::Label-->
+										<!--begin::Col-->
+										<div class="col-lg-8 fv-row">
+											<select name="country" aria-label="Select a Country" data-control="select2"
+												data-placeholder="Select a country..."
+												class="form-select form-select-solid form-select-lg fw-semibold">
+												<option value="">Select a Country...</option>
+												<option data-kt-flag="flags/afghanistan.svg" value="AF">Afghanistan
+												</option>
+												<option data-kt-flag="flags/aland-islands.svg" value="AX">Aland Islands
+												</option>
+												<option data-kt-flag="flags/albania.svg" value="AL">Albania</option>
+												<option data-kt-flag="flags/algeria.svg" value="DZ">Algeria</option>
+												<option data-kt-flag="flags/american-samoa.svg" value="AS">American
+													Samoa</option>
+												<option data-kt-flag="flags/andorra.svg" value="AD">Andorra</option>
+												<option data-kt-flag="flags/angola.svg" value="AO">Angola</option>
+												<option data-kt-flag="flags/anguilla.svg" value="AI">Anguilla</option>
+												<option data-kt-flag="flags/antigua-and-barbuda.svg" value="AG">Antigua
+													and Barbuda</option>
+												<option data-kt-flag="flags/argentina.svg" value="AR">Argentina</option>
+												<option data-kt-flag="flags/armenia.svg" value="AM">Armenia</option>
+												<option data-kt-flag="flags/aruba.svg" value="AW">Aruba</option>
+												<option data-kt-flag="flags/australia.svg" value="AU">Australia</option>
+												<option data-kt-flag="flags/austria.svg" value="AT">Austria</option>
+												<option data-kt-flag="flags/azerbaijan.svg" value="AZ">Azerbaijan
+												</option>
+												<option data-kt-flag="flags/bahamas.svg" value="BS">Bahamas</option>
+												<option data-kt-flag="flags/bahrain.svg" value="BH">Bahrain</option>
+												<option data-kt-flag="flags/bangladesh.svg" value="BD">Bangladesh
+												</option>
+												<option data-kt-flag="flags/barbados.svg" value="BB">Barbados</option>
+												<option data-kt-flag="flags/belarus.svg" value="BY">Belarus</option>
+												<option data-kt-flag="flags/belgium.svg" value="BE">Belgium</option>
+												<option data-kt-flag="flags/belize.svg" value="BZ">Belize</option>
+												<option data-kt-flag="flags/benin.svg" value="BJ">Benin</option>
+												<option data-kt-flag="flags/bermuda.svg" value="BM">Bermuda</option>
+												<option data-kt-flag="flags/bhutan.svg" value="BT">Bhutan</option>
+												<option data-kt-flag="flags/bolivia.svg" value="BO">Bolivia,
+													Plurinational State of</option>
+												<option data-kt-flag="flags/bonaire.svg" value="BQ">Bonaire, Sint
+													Eustatius and Saba</option>
+												<option data-kt-flag="flags/bosnia-and-herzegovina.svg" value="BA">
+													Bosnia and Herzegovina</option>
+												<option data-kt-flag="flags/botswana.svg" value="BW">Botswana</option>
+												<option data-kt-flag="flags/brazil.svg" value="BR">Brazil</option>
+												<option data-kt-flag="flags/british-indian-ocean-territory.svg"
+													value="IO">British Indian Ocean Territory</option>
+												<option data-kt-flag="flags/brunei.svg" value="BN">Brunei Darussalam
+												</option>
+												<option data-kt-flag="flags/bulgaria.svg" value="BG">Bulgaria</option>
+												<option data-kt-flag="flags/burkina-faso.svg" value="BF">Burkina Faso
+												</option>
+												<option data-kt-flag="flags/burundi.svg" value="BI">Burundi</option>
+												<option data-kt-flag="flags/cambodia.svg" value="KH">Cambodia</option>
+												<option data-kt-flag="flags/cameroon.svg" value="CM">Cameroon</option>
+												<option data-kt-flag="flags/canada.svg" value="CA">Canada</option>
+												<option data-kt-flag="flags/cape-verde.svg" value="CV">Cape Verde
+												</option>
+												<option data-kt-flag="flags/cayman-islands.svg" value="KY">Cayman
+													Islands</option>
+												<option data-kt-flag="flags/central-african-republic.svg" value="CF">
+													Central African Republic</option>
+												<option data-kt-flag="flags/chad.svg" value="TD">Chad</option>
+												<option data-kt-flag="flags/chile.svg" value="CL">Chile</option>
+												<option data-kt-flag="flags/china.svg" value="CN">China</option>
+												<option data-kt-flag="flags/christmas-island.svg" value="CX">Christmas
+													Island</option>
+												<option data-kt-flag="flags/cocos-island.svg" value="CC">Cocos (Keeling)
+													Islands</option>
+												<option data-kt-flag="flags/colombia.svg" value="CO">Colombia</option>
+												<option data-kt-flag="flags/comoros.svg" value="KM">Comoros</option>
+												<option data-kt-flag="flags/cook-islands.svg" value="CK">Cook Islands
+												</option>
+												<option data-kt-flag="flags/costa-rica.svg" value="CR">Costa Rica
+												</option>
+												<option data-kt-flag="flags/ivory-coast.svg" value="CI">Côte d'Ivoire
+												</option>
+												<option data-kt-flag="flags/croatia.svg" value="HR">Croatia</option>
+												<option data-kt-flag="flags/cuba.svg" value="CU">Cuba</option>
+												<option data-kt-flag="flags/curacao.svg" value="CW">Curaçao</option>
+												<option data-kt-flag="flags/czech-republic.svg" value="CZ">Czech
+													Republic</option>
+												<option data-kt-flag="flags/denmark.svg" value="DK">Denmark</option>
+												<option data-kt-flag="flags/djibouti.svg" value="DJ">Djibouti</option>
+												<option data-kt-flag="flags/dominica.svg" value="DM">Dominica</option>
+												<option data-kt-flag="flags/dominican-republic.svg" value="DO">Dominican
+													Republic</option>
+												<option data-kt-flag="flags/ecuador.svg" value="EC">Ecuador</option>
+												<option data-kt-flag="flags/egypt.svg" value="EG">Egypt</option>
+												<option data-kt-flag="flags/el-salvador.svg" value="SV">El Salvador
+												</option>
+												<option data-kt-flag="flags/equatorial-guinea.svg" value="GQ">Equatorial
+													Guinea</option>
+												<option data-kt-flag="flags/eritrea.svg" value="ER">Eritrea</option>
+												<option data-kt-flag="flags/estonia.svg" value="EE">Estonia</option>
+												<option data-kt-flag="flags/ethiopia.svg" value="ET">Ethiopia</option>
+												<option data-kt-flag="flags/falkland-islands.svg" value="FK">Falkland
+													Islands (Malvinas)</option>
+												<option data-kt-flag="flags/fiji.svg" value="FJ">Fiji</option>
+												<option data-kt-flag="flags/finland.svg" value="FI">Finland</option>
+												<option data-kt-flag="flags/france.svg" value="FR">France</option>
+												<option data-kt-flag="flags/french-polynesia.svg" value="PF">French
+													Polynesia</option>
+												<option data-kt-flag="flags/gabon.svg" value="GA">Gabon</option>
+												<option data-kt-flag="flags/gambia.svg" value="GM">Gambia</option>
+												<option data-kt-flag="flags/georgia.svg" value="GE">Georgia</option>
+												<option data-kt-flag="flags/germany.svg" value="DE">Germany</option>
+												<option data-kt-flag="flags/ghana.svg" value="GH">Ghana</option>
+												<option data-kt-flag="flags/gibraltar.svg" value="GI">Gibraltar</option>
+												<option data-kt-flag="flags/greece.svg" value="GR">Greece</option>
+												<option data-kt-flag="flags/greenland.svg" value="GL">Greenland</option>
+												<option data-kt-flag="flags/grenada.svg" value="GD">Grenada</option>
+												<option data-kt-flag="flags/guam.svg" value="GU">Guam</option>
+												<option data-kt-flag="flags/guatemala.svg" value="GT">Guatemala</option>
+												<option data-kt-flag="flags/guernsey.svg" value="GG">Guernsey</option>
+												<option data-kt-flag="flags/guinea.svg" value="GN">Guinea</option>
+												<option data-kt-flag="flags/guinea-bissau.svg" value="GW">Guinea-Bissau
+												</option>
+												<option data-kt-flag="flags/haiti.svg" value="HT">Haiti</option>
+												<option data-kt-flag="flags/vatican-city.svg" value="VA">Holy See
+													(Vatican City State)</option>
+												<option data-kt-flag="flags/honduras.svg" value="HN">Honduras</option>
+												<option data-kt-flag="flags/hong-kong.svg" value="HK">Hong Kong</option>
+												<option data-kt-flag="flags/hungary.svg" value="HU">Hungary</option>
+												<option data-kt-flag="flags/iceland.svg" value="IS">Iceland</option>
+												<option data-kt-flag="flags/india.svg" value="IN">India</option>
+												<option data-kt-flag="flags/indonesia.svg" value="ID">Indonesia</option>
+												<option data-kt-flag="flags/iran.svg" value="IR">Iran, Islamic Republic
+													of</option>
+												<option data-kt-flag="flags/iraq.svg" value="IQ">Iraq</option>
+												<option data-kt-flag="flags/ireland.svg" value="IE">Ireland</option>
+												<option data-kt-flag="flags/isle-of-man.svg" value="IM">Isle of Man
+												</option>
+												<option data-kt-flag="flags/israel.svg" value="IL">Israel</option>
+												<option data-kt-flag="flags/italy.svg" value="IT">Italy</option>
+												<option data-kt-flag="flags/jamaica.svg" value="JM">Jamaica</option>
+												<option data-kt-flag="flags/japan.svg" value="JP">Japan</option>
+												<option data-kt-flag="flags/jersey.svg" value="JE">Jersey</option>
+												<option data-kt-flag="flags/jordan.svg" value="JO">Jordan</option>
+												<option data-kt-flag="flags/kazakhstan.svg" value="KZ">Kazakhstan
+												</option>
+												<option data-kt-flag="flags/kenya.svg" value="KE">Kenya</option>
+												<option data-kt-flag="flags/kiribati.svg" value="KI">Kiribati</option>
+												<option data-kt-flag="flags/north-korea.svg" value="KP">Korea,
+													Democratic People's Republic of</option>
+												<option data-kt-flag="flags/kuwait.svg" value="KW">Kuwait</option>
+												<option data-kt-flag="flags/kyrgyzstan.svg" value="KG">Kyrgyzstan
+												</option>
+												<option data-kt-flag="flags/laos.svg" value="LA">Lao People's Democratic
+													Republic</option>
+												<option data-kt-flag="flags/latvia.svg" value="LV">Latvia</option>
+												<option data-kt-flag="flags/lebanon.svg" value="LB">Lebanon</option>
+												<option data-kt-flag="flags/lesotho.svg" value="LS">Lesotho</option>
+												<option data-kt-flag="flags/liberia.svg" value="LR">Liberia</option>
+												<option data-kt-flag="flags/libya.svg" value="LY">Libya</option>
+												<option data-kt-flag="flags/liechtenstein.svg" value="LI">Liechtenstein
+												</option>
+												<option data-kt-flag="flags/lithuania.svg" value="LT">Lithuania</option>
+												<option data-kt-flag="flags/luxembourg.svg" value="LU">Luxembourg
+												</option>
+												<option data-kt-flag="flags/macao.svg" value="MO">Macao</option>
+												<option data-kt-flag="flags/madagascar.svg" value="MG">Madagascar
+												</option>
+												<option data-kt-flag="flags/malawi.svg" value="MW">Malawi</option>
+												<option data-kt-flag="flags/malaysia.svg" value="MY">Malaysia</option>
+												<option data-kt-flag="flags/maldives.svg" value="MV">Maldives</option>
+												<option data-kt-flag="flags/mali.svg" value="ML">Mali</option>
+												<option data-kt-flag="flags/malta.svg" value="MT">Malta</option>
+												<option data-kt-flag="flags/marshall-island.svg" value="MH">Marshall
+													Islands</option>
+												<option data-kt-flag="flags/martinique.svg" value="MQ">Martinique
+												</option>
+												<option data-kt-flag="flags/mauritania.svg" value="MR">Mauritania
+												</option>
+												<option data-kt-flag="flags/mauritius.svg" value="MU">Mauritius</option>
+												<option data-kt-flag="flags/mexico.svg" value="MX">Mexico</option>
+												<option data-kt-flag="flags/micronesia.svg" value="FM">Micronesia,
+													Federated States of</option>
+												<option data-kt-flag="flags/moldova.svg" value="MD">Moldova, Republic of
+												</option>
+												<option data-kt-flag="flags/monaco.svg" value="MC">Monaco</option>
+												<option data-kt-flag="flags/mongolia.svg" value="MN">Mongolia</option>
+												<option data-kt-flag="flags/montenegro.svg" value="ME">Montenegro
+												</option>
+												<option data-kt-flag="flags/montserrat.svg" value="MS">Montserrat
+												</option>
+												<option data-kt-flag="flags/morocco.svg" value="MA">Morocco</option>
+												<option data-kt-flag="flags/mozambique.svg" value="MZ">Mozambique
+												</option>
+												<option data-kt-flag="flags/myanmar.svg" value="MM">Myanmar</option>
+												<option data-kt-flag="flags/namibia.svg" value="NA">Namibia</option>
+												<option data-kt-flag="flags/nauru.svg" value="NR">Nauru</option>
+												<option data-kt-flag="flags/nepal.svg" value="NP">Nepal</option>
+												<option data-kt-flag="flags/netherlands.svg" value="NL">Netherlands
+												</option>
+												<option data-kt-flag="flags/new-zealand.svg" value="NZ">New Zealand
+												</option>
+												<option data-kt-flag="flags/nicaragua.svg" value="NI">Nicaragua</option>
+												<option data-kt-flag="flags/niger.svg" value="NE">Niger</option>
+												<option data-kt-flag="flags/nigeria.svg" value="NG">Nigeria</option>
+												<option data-kt-flag="flags/niue.svg" value="NU">Niue</option>
+												<option data-kt-flag="flags/norfolk-island.svg" value="NF">Norfolk
+													Island</option>
+												<option data-kt-flag="flags/northern-mariana-islands.svg" value="MP">
+													Northern Mariana Islands</option>
+												<option data-kt-flag="flags/norway.svg" value="NO">Norway</option>
+												<option data-kt-flag="flags/oman.svg" value="OM">Oman</option>
+												<option data-kt-flag="flags/pakistan.svg" value="PK">Pakistan</option>
+												<option data-kt-flag="flags/palau.svg" value="PW">Palau</option>
+												<option data-kt-flag="flags/palestine.svg" value="PS">Palestinian
+													Territory, Occupied</option>
+												<option data-kt-flag="flags/panama.svg" value="PA">Panama</option>
+												<option data-kt-flag="flags/papua-new-guinea.svg" value="PG">Papua New
+													Guinea</option>
+												<option data-kt-flag="flags/paraguay.svg" value="PY">Paraguay</option>
+												<option data-kt-flag="flags/peru.svg" value="PE">Peru</option>
+												<option data-kt-flag="flags/philippines.svg" value="PH">Philippines
+												</option>
+												<option data-kt-flag="flags/poland.svg" value="PL">Poland</option>
+												<option data-kt-flag="flags/portugal.svg" value="PT">Portugal</option>
+												<option data-kt-flag="flags/puerto-rico.svg" value="PR">Puerto Rico
+												</option>
+												<option data-kt-flag="flags/qatar.svg" value="QA">Qatar</option>
+												<option data-kt-flag="flags/romania.svg" value="RO">Romania</option>
+												<option data-kt-flag="flags/russia.svg" value="RU">Russian Federation
+												</option>
+												<option data-kt-flag="flags/rwanda.svg" value="RW">Rwanda</option>
+												<option data-kt-flag="flags/st-barts.svg" value="BL">Saint Barthélemy
+												</option>
+												<option data-kt-flag="flags/saint-kitts-and-nevis.svg" value="KN">Saint
+													Kitts and Nevis</option>
+												<option data-kt-flag="flags/st-lucia.svg" value="LC">Saint Lucia
+												</option>
+												<option data-kt-flag="flags/sint-maarten.svg" value="MF">Saint Martin
+													(French part)</option>
+												<option data-kt-flag="flags/st-vincent-and-the-grenadines.svg"
+													value="VC">Saint Vincent and the Grenadines</option>
+												<option data-kt-flag="flags/samoa.svg" value="WS">Samoa</option>
+												<option data-kt-flag="flags/san-marino.svg" value="SM">San Marino
+												</option>
+												<option data-kt-flag="flags/sao-tome-and-prince.svg" value="ST">Sao Tome
+													and Principe</option>
+												<option data-kt-flag="flags/saudi-arabia.svg" value="SA">Saudi Arabia
+												</option>
+												<option data-kt-flag="flags/senegal.svg" value="SN">Senegal</option>
+												<option data-kt-flag="flags/serbia.svg" value="RS">Serbia</option>
+												<option data-kt-flag="flags/seychelles.svg" value="SC">Seychelles
+												</option>
+												<option data-kt-flag="flags/sierra-leone.svg" value="SL">Sierra Leone
+												</option>
+												<option data-kt-flag="flags/singapore.svg" value="SG">Singapore</option>
+												<option data-kt-flag="flags/sint-maarten.svg" value="SX">Sint Maarten
+													(Dutch part)</option>
+												<option data-kt-flag="flags/slovakia.svg" value="SK">Slovakia</option>
+												<option data-kt-flag="flags/slovenia.svg" value="SI">Slovenia</option>
+												<option data-kt-flag="flags/solomon-islands.svg" value="SB">Solomon
+													Islands</option>
+												<option data-kt-flag="flags/somalia.svg" value="SO">Somalia</option>
+												<option data-kt-flag="flags/south-africa.svg" value="ZA">South Africa
+												</option>
+												<option data-kt-flag="flags/south-korea.svg" value="KR">South Korea
+												</option>
+												<option data-kt-flag="flags/south-sudan.svg" value="SS">South Sudan
+												</option>
+												<option data-kt-flag="flags/spain.svg" value="ES">Spain</option>
+												<option data-kt-flag="flags/sri-lanka.svg" value="LK">Sri Lanka</option>
+												<option data-kt-flag="flags/sudan.svg" value="SD">Sudan</option>
+												<option data-kt-flag="flags/suriname.svg" value="SR">Suriname</option>
+												<option data-kt-flag="flags/swaziland.svg" value="SZ">Swaziland</option>
+												<option data-kt-flag="flags/sweden.svg" value="SE">Sweden</option>
+												<option data-kt-flag="flags/switzerland.svg" value="CH">Switzerland
+												</option>
+												<option data-kt-flag="flags/syria.svg" value="SY">Syrian Arab Republic
+												</option>
+												<option data-kt-flag="flags/taiwan.svg" value="TW">Taiwan, Province of
+													China</option>
+												<option data-kt-flag="flags/tajikistan.svg" value="TJ">Tajikistan
+												</option>
+												<option data-kt-flag="flags/tanzania.svg" value="TZ">Tanzania, United
+													Republic of</option>
+												<option data-kt-flag="flags/thailand.svg" value="TH">Thailand</option>
+												<option data-kt-flag="flags/togo.svg" value="TG">Togo</option>
+												<option data-kt-flag="flags/tokelau.svg" value="TK">Tokelau</option>
+												<option data-kt-flag="flags/tonga.svg" value="TO">Tonga</option>
+												<option data-kt-flag="flags/trinidad-and-tobago.svg" value="TT">Trinidad
+													and Tobago</option>
+												<option data-kt-flag="flags/tunisia.svg" value="TN">Tunisia</option>
+												<option data-kt-flag="flags/turkey.svg" value="TR">Turkey</option>
+												<option data-kt-flag="flags/turkmenistan.svg" value="TM">Turkmenistan
+												</option>
+												<option data-kt-flag="flags/turks-and-caicos.svg" value="TC">Turks and
+													Caicos Islands</option>
+												<option data-kt-flag="flags/tuvalu.svg" value="TV">Tuvalu</option>
+												<option data-kt-flag="flags/uganda.svg" value="UG">Uganda</option>
+												<option data-kt-flag="flags/ukraine.svg" value="UA">Ukraine</option>
+												<option data-kt-flag="flags/united-arab-emirates.svg" value="AE">United
+													Arab Emirates</option>
+												<option data-kt-flag="flags/united-kingdom.svg" value="GB">United
+													Kingdom</option>
+												<option data-kt-flag="flags/united-states.svg" value="US">United States
+												</option>
+												<option data-kt-flag="flags/uruguay.svg" value="UY">Uruguay</option>
+												<option data-kt-flag="flags/uzbekistan.svg" value="UZ">Uzbekistan
+												</option>
+												<option data-kt-flag="flags/vanuatu.svg" value="VU">Vanuatu</option>
+												<option data-kt-flag="flags/venezuela.svg" value="VE">Venezuela,
+													Bolivarian Republic of</option>
+												<option data-kt-flag="flags/vietnam.svg" value="VN">Vietnam</option>
+												<option data-kt-flag="flags/virgin-islands.svg" value="VI">Virgin
+													Islands</option>
+												<option data-kt-flag="flags/yemen.svg" value="YE">Yemen</option>
+												<option data-kt-flag="flags/zambia.svg" value="ZM">Zambia</option>
+												<option data-kt-flag="flags/zimbabwe.svg" value="ZW">Zimbabwe</option>
+											</select>
+										</div>
+										<!--end::Col-->
+									</div>
+									<!--end::Input group-->
+
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="col-md-6 row mb-6">
+										<!--begin::Label-->
+										<label class="col-lg-4 col-form-label fw-semibold fs-6">
+											<span class="required">Governorates</span>
+
+										</label>
+										<div class="col-lg-8 fv-row">
+											<select name="Governorates" aria-label="Select a Governorates"
+												data-control="select2" data-placeholder="Select a Governorates..."
+												class="form-select form-select-solid form-select-lg fw-semibold">
+												<option value="">Select a Governorates...</option>
+												<option value="muscat">Muscat</option>
+												<option value="dhofar">Dhofar</option>
+												<option value="al_batinahS">Al Batinah South</option>
+												<option value="al_batinahN">Al Batinah North</option>
+												<option value="al_dakhiliyah">Al Dakhiliyah</option>
+												<option value="musandam">Musandam</option>
+
+
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row mb-6">
+									<div class="col-md-6 row mb-6">
+										<!--begin::Label-->
+										<label class="col-lg-4 col-form-label required fw-semibold fs-6">City</label>
+										<!--end::Label-->
+										<!--begin::Col-->
+										<div class="col-lg-8">
+											<!--begin::Row-->
+											<div class="row">
+
+												<!--end::Col-->
+												<!--begin::Col-->
+												<div class="fv-row">
+													<input type="text" name="City"
+														class="form-control form-control-lg form-control-solid"
+														placeholder="City" value="Nizwa" />
+												</div>
+												<!--end::Col-->
+											</div>
+											<!--end::Row-->
+										</div>
+										<!--end::Col-->
+									</div>
+									<!--end::Input group-->
+
+									<!--end::Input group-->
+									<!--begin::Input group-->
+									<div class="col-md-6 row mb-6">
+										<!--begin::Label-->
+										<label class="col-lg-4 col-form-label fw-semibold fs-6">
+											<span class="required">Street</span>
+
+										</label>
+										<!--end::Label-->
+										<!--begin::Col-->
+										<div class="col-lg-8 fv-row">
+											<input type="tel" name="Street"
+												class="form-control form-control-lg form-control-solid"
+												placeholder="Street, house/apartment/unit*" value="044 3276 454 935" />
+										</div>
+										<!--end::Col-->
+									</div>
+								</div>
+								<!--end::Input group-->
+								<!--begin::Input group-->
+
+								<!--end::Input group-->
+								<!--begin::Input group-->
+
+								<div class="row mb-0">
+									<!--begin::Label-->
+									<label class="col-lg-4 col-form-label fw-semibold fs-6">Set as default shipping
+										address</label>
+									<!--begin::Label-->
+									<!--begin::Label-->
+									<div class="col-lg-8 d-flex align-items-center">
+										<div class="form-check form-check-solid form-switch form-check-custom fv-row">
+											<input class="form-check-input w-45px h-30px" type="checkbox"
+												id="allowmarketing" checked="checked">
+											<label class="form-check-label" for="allowmarketing"></label>
+										</div>
+									</div>
+									<!--begin::Label-->
+								</div>
+								<!--end::Input group-->
+							</div>
+							<!--end::Card body-->
+							<!--begin::Actions-->
+							<div class="card-footer d-flex justify-content-end py-6 px-9">
+								<button type="submit" class="btn btn-primary"
+									id="kt_account_profile_details_submit">Save Changes</button>
+							</div>
+							<!--end::Actions-->
+						</form>
+
+
+					</div>
+					<!--begin::Modal body-->
 				</div>
-
-				<div class="modal-body scroll-y m-5">
-
-
-
-					<form id="kt_account_profile_details_form" class="form">
-
-						<div class="card-body  p-9">
-
-
-							<div class="row mb-6">
-								<div class="col-md-6 row mb-6">
-									<!--begin::Label-->
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Name</label>
-									<!--end::Label-->
-									<!--begin::Col-->
-									<div class="col-lg-8">
-										<!--begin::Row-->
-										<div class="row">
-
-											<!--end::Col-->
-											<!--begin::Col-->
-											<div class="fv-row">
-												<input type="text" name="lname"
-													class="form-control form-control-lg form-control-solid"
-													placeholder="Last name" value="Smith" />
-											</div>
-											<!--end::Col-->
-										</div>
-										<!--end::Row-->
-									</div>
-									<!--end::Col-->
-								</div>
-								<!--end::Input group-->
-
-								<!--end::Input group-->
-								<!--begin::Input group-->
-								<div class="col-md-6 row mb-6">
-									<!--begin::Label-->
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">
-										<span class="required">Phone</span>
-
-									</label>
-									<!--end::Label-->
-									<!--begin::Col-->
-									<div class="col-lg-8 fv-row">
-										<input type="tel" name="phone"
-											class="form-control form-control-lg form-control-solid"
-											placeholder="Phone number" value="044 3276 454 935" />
-									</div>
-									<!--end::Col-->
-								</div>
-							</div>
-							<!--end::Input group-->
-
-							<!--begin::Input group-->
-
-							<div class="row mb-6">
-								<div class="col-md-6 row mb-6">
-									<!--begin::Label-->
-									<label
-										class="col-lg-4 col-form-label required fw-semibold fs-6">Country/Region</label>
-									<!--end::Label-->
-									<!--begin::Col-->
-									<div class="col-lg-8 fv-row">
-										<select name="country" aria-label="Select a Country" data-control="select2"
-											data-placeholder="Select a country..."
-											class="form-select form-select-solid form-select-lg fw-semibold">
-											<option value="">Select a Country...</option>
-											<option data-kt-flag="flags/afghanistan.svg" value="AF">Afghanistan</option>
-											<option data-kt-flag="flags/aland-islands.svg" value="AX">Aland Islands
-											</option>
-											<option data-kt-flag="flags/albania.svg" value="AL">Albania</option>
-											<option data-kt-flag="flags/algeria.svg" value="DZ">Algeria</option>
-											<option data-kt-flag="flags/american-samoa.svg" value="AS">American Samoa
-											</option>
-											<option data-kt-flag="flags/andorra.svg" value="AD">Andorra</option>
-											<option data-kt-flag="flags/angola.svg" value="AO">Angola</option>
-											<option data-kt-flag="flags/anguilla.svg" value="AI">Anguilla</option>
-											<option data-kt-flag="flags/antigua-and-barbuda.svg" value="AG">Antigua and
-												Barbuda</option>
-											<option data-kt-flag="flags/argentina.svg" value="AR">Argentina</option>
-											<option data-kt-flag="flags/armenia.svg" value="AM">Armenia</option>
-											<option data-kt-flag="flags/aruba.svg" value="AW">Aruba</option>
-											<option data-kt-flag="flags/australia.svg" value="AU">Australia</option>
-											<option data-kt-flag="flags/austria.svg" value="AT">Austria</option>
-											<option data-kt-flag="flags/azerbaijan.svg" value="AZ">Azerbaijan</option>
-											<option data-kt-flag="flags/bahamas.svg" value="BS">Bahamas</option>
-											<option data-kt-flag="flags/bahrain.svg" value="BH">Bahrain</option>
-											<option data-kt-flag="flags/bangladesh.svg" value="BD">Bangladesh</option>
-											<option data-kt-flag="flags/barbados.svg" value="BB">Barbados</option>
-											<option data-kt-flag="flags/belarus.svg" value="BY">Belarus</option>
-											<option data-kt-flag="flags/belgium.svg" value="BE">Belgium</option>
-											<option data-kt-flag="flags/belize.svg" value="BZ">Belize</option>
-											<option data-kt-flag="flags/benin.svg" value="BJ">Benin</option>
-											<option data-kt-flag="flags/bermuda.svg" value="BM">Bermuda</option>
-											<option data-kt-flag="flags/bhutan.svg" value="BT">Bhutan</option>
-											<option data-kt-flag="flags/bolivia.svg" value="BO">Bolivia, Plurinational
-												State of</option>
-											<option data-kt-flag="flags/bonaire.svg" value="BQ">Bonaire, Sint Eustatius
-												and Saba</option>
-											<option data-kt-flag="flags/bosnia-and-herzegovina.svg" value="BA">Bosnia
-												and Herzegovina</option>
-											<option data-kt-flag="flags/botswana.svg" value="BW">Botswana</option>
-											<option data-kt-flag="flags/brazil.svg" value="BR">Brazil</option>
-											<option data-kt-flag="flags/british-indian-ocean-territory.svg" value="IO">
-												British Indian Ocean Territory</option>
-											<option data-kt-flag="flags/brunei.svg" value="BN">Brunei Darussalam
-											</option>
-											<option data-kt-flag="flags/bulgaria.svg" value="BG">Bulgaria</option>
-											<option data-kt-flag="flags/burkina-faso.svg" value="BF">Burkina Faso
-											</option>
-											<option data-kt-flag="flags/burundi.svg" value="BI">Burundi</option>
-											<option data-kt-flag="flags/cambodia.svg" value="KH">Cambodia</option>
-											<option data-kt-flag="flags/cameroon.svg" value="CM">Cameroon</option>
-											<option data-kt-flag="flags/canada.svg" value="CA">Canada</option>
-											<option data-kt-flag="flags/cape-verde.svg" value="CV">Cape Verde</option>
-											<option data-kt-flag="flags/cayman-islands.svg" value="KY">Cayman Islands
-											</option>
-											<option data-kt-flag="flags/central-african-republic.svg" value="CF">Central
-												African Republic</option>
-											<option data-kt-flag="flags/chad.svg" value="TD">Chad</option>
-											<option data-kt-flag="flags/chile.svg" value="CL">Chile</option>
-											<option data-kt-flag="flags/china.svg" value="CN">China</option>
-											<option data-kt-flag="flags/christmas-island.svg" value="CX">Christmas
-												Island</option>
-											<option data-kt-flag="flags/cocos-island.svg" value="CC">Cocos (Keeling)
-												Islands</option>
-											<option data-kt-flag="flags/colombia.svg" value="CO">Colombia</option>
-											<option data-kt-flag="flags/comoros.svg" value="KM">Comoros</option>
-											<option data-kt-flag="flags/cook-islands.svg" value="CK">Cook Islands
-											</option>
-											<option data-kt-flag="flags/costa-rica.svg" value="CR">Costa Rica</option>
-											<option data-kt-flag="flags/ivory-coast.svg" value="CI">Côte d'Ivoire
-											</option>
-											<option data-kt-flag="flags/croatia.svg" value="HR">Croatia</option>
-											<option data-kt-flag="flags/cuba.svg" value="CU">Cuba</option>
-											<option data-kt-flag="flags/curacao.svg" value="CW">Curaçao</option>
-											<option data-kt-flag="flags/czech-republic.svg" value="CZ">Czech Republic
-											</option>
-											<option data-kt-flag="flags/denmark.svg" value="DK">Denmark</option>
-											<option data-kt-flag="flags/djibouti.svg" value="DJ">Djibouti</option>
-											<option data-kt-flag="flags/dominica.svg" value="DM">Dominica</option>
-											<option data-kt-flag="flags/dominican-republic.svg" value="DO">Dominican
-												Republic</option>
-											<option data-kt-flag="flags/ecuador.svg" value="EC">Ecuador</option>
-											<option data-kt-flag="flags/egypt.svg" value="EG">Egypt</option>
-											<option data-kt-flag="flags/el-salvador.svg" value="SV">El Salvador</option>
-											<option data-kt-flag="flags/equatorial-guinea.svg" value="GQ">Equatorial
-												Guinea</option>
-											<option data-kt-flag="flags/eritrea.svg" value="ER">Eritrea</option>
-											<option data-kt-flag="flags/estonia.svg" value="EE">Estonia</option>
-											<option data-kt-flag="flags/ethiopia.svg" value="ET">Ethiopia</option>
-											<option data-kt-flag="flags/falkland-islands.svg" value="FK">Falkland
-												Islands (Malvinas)</option>
-											<option data-kt-flag="flags/fiji.svg" value="FJ">Fiji</option>
-											<option data-kt-flag="flags/finland.svg" value="FI">Finland</option>
-											<option data-kt-flag="flags/france.svg" value="FR">France</option>
-											<option data-kt-flag="flags/french-polynesia.svg" value="PF">French
-												Polynesia</option>
-											<option data-kt-flag="flags/gabon.svg" value="GA">Gabon</option>
-											<option data-kt-flag="flags/gambia.svg" value="GM">Gambia</option>
-											<option data-kt-flag="flags/georgia.svg" value="GE">Georgia</option>
-											<option data-kt-flag="flags/germany.svg" value="DE">Germany</option>
-											<option data-kt-flag="flags/ghana.svg" value="GH">Ghana</option>
-											<option data-kt-flag="flags/gibraltar.svg" value="GI">Gibraltar</option>
-											<option data-kt-flag="flags/greece.svg" value="GR">Greece</option>
-											<option data-kt-flag="flags/greenland.svg" value="GL">Greenland</option>
-											<option data-kt-flag="flags/grenada.svg" value="GD">Grenada</option>
-											<option data-kt-flag="flags/guam.svg" value="GU">Guam</option>
-											<option data-kt-flag="flags/guatemala.svg" value="GT">Guatemala</option>
-											<option data-kt-flag="flags/guernsey.svg" value="GG">Guernsey</option>
-											<option data-kt-flag="flags/guinea.svg" value="GN">Guinea</option>
-											<option data-kt-flag="flags/guinea-bissau.svg" value="GW">Guinea-Bissau
-											</option>
-											<option data-kt-flag="flags/haiti.svg" value="HT">Haiti</option>
-											<option data-kt-flag="flags/vatican-city.svg" value="VA">Holy See (Vatican
-												City State)</option>
-											<option data-kt-flag="flags/honduras.svg" value="HN">Honduras</option>
-											<option data-kt-flag="flags/hong-kong.svg" value="HK">Hong Kong</option>
-											<option data-kt-flag="flags/hungary.svg" value="HU">Hungary</option>
-											<option data-kt-flag="flags/iceland.svg" value="IS">Iceland</option>
-											<option data-kt-flag="flags/india.svg" value="IN">India</option>
-											<option data-kt-flag="flags/indonesia.svg" value="ID">Indonesia</option>
-											<option data-kt-flag="flags/iran.svg" value="IR">Iran, Islamic Republic of
-											</option>
-											<option data-kt-flag="flags/iraq.svg" value="IQ">Iraq</option>
-											<option data-kt-flag="flags/ireland.svg" value="IE">Ireland</option>
-											<option data-kt-flag="flags/isle-of-man.svg" value="IM">Isle of Man</option>
-											<option data-kt-flag="flags/israel.svg" value="IL">Israel</option>
-											<option data-kt-flag="flags/italy.svg" value="IT">Italy</option>
-											<option data-kt-flag="flags/jamaica.svg" value="JM">Jamaica</option>
-											<option data-kt-flag="flags/japan.svg" value="JP">Japan</option>
-											<option data-kt-flag="flags/jersey.svg" value="JE">Jersey</option>
-											<option data-kt-flag="flags/jordan.svg" value="JO">Jordan</option>
-											<option data-kt-flag="flags/kazakhstan.svg" value="KZ">Kazakhstan</option>
-											<option data-kt-flag="flags/kenya.svg" value="KE">Kenya</option>
-											<option data-kt-flag="flags/kiribati.svg" value="KI">Kiribati</option>
-											<option data-kt-flag="flags/north-korea.svg" value="KP">Korea, Democratic
-												People's Republic of</option>
-											<option data-kt-flag="flags/kuwait.svg" value="KW">Kuwait</option>
-											<option data-kt-flag="flags/kyrgyzstan.svg" value="KG">Kyrgyzstan</option>
-											<option data-kt-flag="flags/laos.svg" value="LA">Lao People's Democratic
-												Republic</option>
-											<option data-kt-flag="flags/latvia.svg" value="LV">Latvia</option>
-											<option data-kt-flag="flags/lebanon.svg" value="LB">Lebanon</option>
-											<option data-kt-flag="flags/lesotho.svg" value="LS">Lesotho</option>
-											<option data-kt-flag="flags/liberia.svg" value="LR">Liberia</option>
-											<option data-kt-flag="flags/libya.svg" value="LY">Libya</option>
-											<option data-kt-flag="flags/liechtenstein.svg" value="LI">Liechtenstein
-											</option>
-											<option data-kt-flag="flags/lithuania.svg" value="LT">Lithuania</option>
-											<option data-kt-flag="flags/luxembourg.svg" value="LU">Luxembourg</option>
-											<option data-kt-flag="flags/macao.svg" value="MO">Macao</option>
-											<option data-kt-flag="flags/madagascar.svg" value="MG">Madagascar</option>
-											<option data-kt-flag="flags/malawi.svg" value="MW">Malawi</option>
-											<option data-kt-flag="flags/malaysia.svg" value="MY">Malaysia</option>
-											<option data-kt-flag="flags/maldives.svg" value="MV">Maldives</option>
-											<option data-kt-flag="flags/mali.svg" value="ML">Mali</option>
-											<option data-kt-flag="flags/malta.svg" value="MT">Malta</option>
-											<option data-kt-flag="flags/marshall-island.svg" value="MH">Marshall Islands
-											</option>
-											<option data-kt-flag="flags/martinique.svg" value="MQ">Martinique</option>
-											<option data-kt-flag="flags/mauritania.svg" value="MR">Mauritania</option>
-											<option data-kt-flag="flags/mauritius.svg" value="MU">Mauritius</option>
-											<option data-kt-flag="flags/mexico.svg" value="MX">Mexico</option>
-											<option data-kt-flag="flags/micronesia.svg" value="FM">Micronesia, Federated
-												States of</option>
-											<option data-kt-flag="flags/moldova.svg" value="MD">Moldova, Republic of
-											</option>
-											<option data-kt-flag="flags/monaco.svg" value="MC">Monaco</option>
-											<option data-kt-flag="flags/mongolia.svg" value="MN">Mongolia</option>
-											<option data-kt-flag="flags/montenegro.svg" value="ME">Montenegro</option>
-											<option data-kt-flag="flags/montserrat.svg" value="MS">Montserrat</option>
-											<option data-kt-flag="flags/morocco.svg" value="MA">Morocco</option>
-											<option data-kt-flag="flags/mozambique.svg" value="MZ">Mozambique</option>
-											<option data-kt-flag="flags/myanmar.svg" value="MM">Myanmar</option>
-											<option data-kt-flag="flags/namibia.svg" value="NA">Namibia</option>
-											<option data-kt-flag="flags/nauru.svg" value="NR">Nauru</option>
-											<option data-kt-flag="flags/nepal.svg" value="NP">Nepal</option>
-											<option data-kt-flag="flags/netherlands.svg" value="NL">Netherlands</option>
-											<option data-kt-flag="flags/new-zealand.svg" value="NZ">New Zealand</option>
-											<option data-kt-flag="flags/nicaragua.svg" value="NI">Nicaragua</option>
-											<option data-kt-flag="flags/niger.svg" value="NE">Niger</option>
-											<option data-kt-flag="flags/nigeria.svg" value="NG">Nigeria</option>
-											<option data-kt-flag="flags/niue.svg" value="NU">Niue</option>
-											<option data-kt-flag="flags/norfolk-island.svg" value="NF">Norfolk Island
-											</option>
-											<option data-kt-flag="flags/northern-mariana-islands.svg" value="MP">
-												Northern Mariana Islands</option>
-											<option data-kt-flag="flags/norway.svg" value="NO">Norway</option>
-											<option data-kt-flag="flags/oman.svg" value="OM">Oman</option>
-											<option data-kt-flag="flags/pakistan.svg" value="PK">Pakistan</option>
-											<option data-kt-flag="flags/palau.svg" value="PW">Palau</option>
-											<option data-kt-flag="flags/palestine.svg" value="PS">Palestinian Territory,
-												Occupied</option>
-											<option data-kt-flag="flags/panama.svg" value="PA">Panama</option>
-											<option data-kt-flag="flags/papua-new-guinea.svg" value="PG">Papua New
-												Guinea</option>
-											<option data-kt-flag="flags/paraguay.svg" value="PY">Paraguay</option>
-											<option data-kt-flag="flags/peru.svg" value="PE">Peru</option>
-											<option data-kt-flag="flags/philippines.svg" value="PH">Philippines</option>
-											<option data-kt-flag="flags/poland.svg" value="PL">Poland</option>
-											<option data-kt-flag="flags/portugal.svg" value="PT">Portugal</option>
-											<option data-kt-flag="flags/puerto-rico.svg" value="PR">Puerto Rico</option>
-											<option data-kt-flag="flags/qatar.svg" value="QA">Qatar</option>
-											<option data-kt-flag="flags/romania.svg" value="RO">Romania</option>
-											<option data-kt-flag="flags/russia.svg" value="RU">Russian Federation
-											</option>
-											<option data-kt-flag="flags/rwanda.svg" value="RW">Rwanda</option>
-											<option data-kt-flag="flags/st-barts.svg" value="BL">Saint Barthélemy
-											</option>
-											<option data-kt-flag="flags/saint-kitts-and-nevis.svg" value="KN">Saint
-												Kitts and Nevis</option>
-											<option data-kt-flag="flags/st-lucia.svg" value="LC">Saint Lucia</option>
-											<option data-kt-flag="flags/sint-maarten.svg" value="MF">Saint Martin
-												(French part)</option>
-											<option data-kt-flag="flags/st-vincent-and-the-grenadines.svg" value="VC">
-												Saint Vincent and the Grenadines</option>
-											<option data-kt-flag="flags/samoa.svg" value="WS">Samoa</option>
-											<option data-kt-flag="flags/san-marino.svg" value="SM">San Marino</option>
-											<option data-kt-flag="flags/sao-tome-and-prince.svg" value="ST">Sao Tome and
-												Principe</option>
-											<option data-kt-flag="flags/saudi-arabia.svg" value="SA">Saudi Arabia
-											</option>
-											<option data-kt-flag="flags/senegal.svg" value="SN">Senegal</option>
-											<option data-kt-flag="flags/serbia.svg" value="RS">Serbia</option>
-											<option data-kt-flag="flags/seychelles.svg" value="SC">Seychelles</option>
-											<option data-kt-flag="flags/sierra-leone.svg" value="SL">Sierra Leone
-											</option>
-											<option data-kt-flag="flags/singapore.svg" value="SG">Singapore</option>
-											<option data-kt-flag="flags/sint-maarten.svg" value="SX">Sint Maarten (Dutch
-												part)</option>
-											<option data-kt-flag="flags/slovakia.svg" value="SK">Slovakia</option>
-											<option data-kt-flag="flags/slovenia.svg" value="SI">Slovenia</option>
-											<option data-kt-flag="flags/solomon-islands.svg" value="SB">Solomon Islands
-											</option>
-											<option data-kt-flag="flags/somalia.svg" value="SO">Somalia</option>
-											<option data-kt-flag="flags/south-africa.svg" value="ZA">South Africa
-											</option>
-											<option data-kt-flag="flags/south-korea.svg" value="KR">South Korea</option>
-											<option data-kt-flag="flags/south-sudan.svg" value="SS">South Sudan</option>
-											<option data-kt-flag="flags/spain.svg" value="ES">Spain</option>
-											<option data-kt-flag="flags/sri-lanka.svg" value="LK">Sri Lanka</option>
-											<option data-kt-flag="flags/sudan.svg" value="SD">Sudan</option>
-											<option data-kt-flag="flags/suriname.svg" value="SR">Suriname</option>
-											<option data-kt-flag="flags/swaziland.svg" value="SZ">Swaziland</option>
-											<option data-kt-flag="flags/sweden.svg" value="SE">Sweden</option>
-											<option data-kt-flag="flags/switzerland.svg" value="CH">Switzerland</option>
-											<option data-kt-flag="flags/syria.svg" value="SY">Syrian Arab Republic
-											</option>
-											<option data-kt-flag="flags/taiwan.svg" value="TW">Taiwan, Province of China
-											</option>
-											<option data-kt-flag="flags/tajikistan.svg" value="TJ">Tajikistan</option>
-											<option data-kt-flag="flags/tanzania.svg" value="TZ">Tanzania, United
-												Republic of</option>
-											<option data-kt-flag="flags/thailand.svg" value="TH">Thailand</option>
-											<option data-kt-flag="flags/togo.svg" value="TG">Togo</option>
-											<option data-kt-flag="flags/tokelau.svg" value="TK">Tokelau</option>
-											<option data-kt-flag="flags/tonga.svg" value="TO">Tonga</option>
-											<option data-kt-flag="flags/trinidad-and-tobago.svg" value="TT">Trinidad and
-												Tobago</option>
-											<option data-kt-flag="flags/tunisia.svg" value="TN">Tunisia</option>
-											<option data-kt-flag="flags/turkey.svg" value="TR">Turkey</option>
-											<option data-kt-flag="flags/turkmenistan.svg" value="TM">Turkmenistan
-											</option>
-											<option data-kt-flag="flags/turks-and-caicos.svg" value="TC">Turks and
-												Caicos Islands</option>
-											<option data-kt-flag="flags/tuvalu.svg" value="TV">Tuvalu</option>
-											<option data-kt-flag="flags/uganda.svg" value="UG">Uganda</option>
-											<option data-kt-flag="flags/ukraine.svg" value="UA">Ukraine</option>
-											<option data-kt-flag="flags/united-arab-emirates.svg" value="AE">United Arab
-												Emirates</option>
-											<option data-kt-flag="flags/united-kingdom.svg" value="GB">United Kingdom
-											</option>
-											<option data-kt-flag="flags/united-states.svg" value="US">United States
-											</option>
-											<option data-kt-flag="flags/uruguay.svg" value="UY">Uruguay</option>
-											<option data-kt-flag="flags/uzbekistan.svg" value="UZ">Uzbekistan</option>
-											<option data-kt-flag="flags/vanuatu.svg" value="VU">Vanuatu</option>
-											<option data-kt-flag="flags/venezuela.svg" value="VE">Venezuela, Bolivarian
-												Republic of</option>
-											<option data-kt-flag="flags/vietnam.svg" value="VN">Vietnam</option>
-											<option data-kt-flag="flags/virgin-islands.svg" value="VI">Virgin Islands
-											</option>
-											<option data-kt-flag="flags/yemen.svg" value="YE">Yemen</option>
-											<option data-kt-flag="flags/zambia.svg" value="ZM">Zambia</option>
-											<option data-kt-flag="flags/zimbabwe.svg" value="ZW">Zimbabwe</option>
-										</select>
-									</div>
-									<!--end::Col-->
-								</div>
-								<!--end::Input group-->
-
-								<!--end::Input group-->
-								<!--begin::Input group-->
-								<div class="col-md-6 row mb-6">
-									<!--begin::Label-->
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">
-										<span class="required">Governorates</span>
-
-									</label>
-									<div class="col-lg-8 fv-row">
-										<select name="Governorates" aria-label="Select a Governorates"
-											data-control="select2" data-placeholder="Select a Governorates..."
-											class="form-select form-select-solid form-select-lg fw-semibold">
-											<option value="">Select a Governorates...</option>
-											<option value="muscat">Muscat</option>
-											<option value="dhofar">Dhofar</option>
-											<option value="al_batinahS">Al Batinah South</option>
-											<option value="al_batinahN">Al Batinah North</option>
-											<option value="al_dakhiliyah">Al Dakhiliyah</option>
-											<option value="musandam">Musandam</option>
-
-
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="row mb-6">
-								<div class="col-md-6 row mb-6">
-									<!--begin::Label-->
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">City</label>
-									<!--end::Label-->
-									<!--begin::Col-->
-									<div class="col-lg-8">
-										<!--begin::Row-->
-										<div class="row">
-
-											<!--end::Col-->
-											<!--begin::Col-->
-											<div class="fv-row">
-												<input type="text" name="City"
-													class="form-control form-control-lg form-control-solid"
-													placeholder="City" value="Nizwa" />
-											</div>
-											<!--end::Col-->
-										</div>
-										<!--end::Row-->
-									</div>
-									<!--end::Col-->
-								</div>
-								<!--end::Input group-->
-
-								<!--end::Input group-->
-								<!--begin::Input group-->
-								<div class="col-md-6 row mb-6">
-									<!--begin::Label-->
-									<label class="col-lg-4 col-form-label fw-semibold fs-6">
-										<span class="required">Street</span>
-
-									</label>
-									<!--end::Label-->
-									<!--begin::Col-->
-									<div class="col-lg-8 fv-row">
-										<input type="tel" name="Street"
-											class="form-control form-control-lg form-control-solid"
-											placeholder="Street, house/apartment/unit*" value="044 3276 454 935" />
-									</div>
-									<!--end::Col-->
-								</div>
-							</div>
-							<div class="row mb-6">
-								<div class="col-md-6 row mb-6">
-									<!--begin::Label-->
-									<label class="col-lg-4 col-form-label required fw-semibold fs-6">Area</label>
-									<!--end::Label-->
-									<!--begin::Col-->
-									<div class="col-lg-8">
-										<!--begin::Row-->
-										<div class="row">
-
-											<!--end::Col-->
-											<!--begin::Col-->
-											<div class="fv-row">
-												<input type="text" name="area"
-													class="form-control form-control-lg form-control-solid"
-													placeholder="area" value="Nizwa" />
-											</div>
-											<!--end::Col-->
-										</div>
-										<!--end::Row-->
-									</div>
-									<!--end::Col-->
-								</div>
-
-								
-							</div>
-
-
-							<div class="row mb-0">
-								<!--begin::Label-->
-								<label class="col-lg-4 col-form-label fw-semibold fs-6">Set as default shipping
-									address</label>
-								<!--begin::Label-->
-								<!--begin::Label-->
-								<div class="col-lg-8 d-flex align-items-center">
-									<div class="form-check form-check-solid form-switch form-check-custom fv-row">
-										<input class="form-check-input w-45px h-30px" type="checkbox"
-											id="allowmarketing" checked="checked">
-										<label class="form-check-label" for="allowmarketing"></label>
-									</div>
-								</div>
-								<!--begin::Label-->
-							</div>
-							<!--end::Input group-->
-						</div>
-						<!--end::Card body-->
-						<!--begin::Actions-->
-						<div class="card-footer d-flex justify-content-end py-6 px-9">
-							<button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Save
-								Changes</button>
-						</div>
-						<!--end::Actions-->
-					</form>
-
-
-				</div>
-				<!--begin::Modal body-->
 			</div>
 		</div>
-	</div>
-	<!--end::Modal - Invite Friend-->
-	<!--end::Modals-->
-	<!--begin::Javascript-->
-	<script>var hostUrl = "assets/";</script>
-	<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-	<script src="assets/plugins/global/plugins.bundle.js"></script>
-	<script src="assets/js/scripts.bundle.js"></script>
-	<!--end::Global Javascript Bundle-->
-	<!--begin::Vendors Javascript(used for this page only)-->
-	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-	<!--end::Vendors Javascript-->
-	<!--begin::Custom Javascript(used for this page only)-->
-	<script src="assets/js/custom/pages/user-profile/general.js"></script>
-	<script src="assets/js/widgets.bundle.js"></script>
-	<script src="assets/js/custom/widgets.js"></script>
-	<script src="assets/js/custom/apps/chat/chat.js"></script>
-	<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
-	<script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
-	<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-	<script src="assets/js/custom/utilities/modals/offer-a-deal/type.js"></script>
-	<script src="assets/js/custom/utilities/modals/offer-a-deal/details.js"></script>
-	<script src="assets/js/custom/utilities/modals/offer-a-deal/finance.js"></script>
-	<script src="assets/js/custom/utilities/modals/offer-a-deal/complete.js"></script>
-	<script src="assets/js/custom/utilities/modals/offer-a-deal/main.js"></script>
-	<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-	<!--end::Custom Javascript-->
-	<!--end::Javascript-->
-	<script>
-		const currentYear = new Date().getFullYear();
-		document.getElementById('yearTab').innerText = currentYear;
-
-		function handleFilterClick(event, filter) {
-			event.preventDefault();
-
-			const activeLinks = document.querySelectorAll('.nav-link');
-			activeLinks.forEach(link => link.classList.remove('active'));
-
-			event.currentTarget.classList.add('active');
-
-			filterCards(filter);
-		}
-
-		function filterCards(filter) {
-			const cards = document.querySelectorAll('.timeline-card');
-
-			const currentDate = new Date();
-
-			cards.forEach(card => {
-				const cardDate = new Date(card.getAttribute('card-date'));
-
-				let showCard = true;
-				if (filter === 'all') {
-					showCard = true;
-				}
-				else if (filter === 'today') {
-					showCard = cardDate.toDateString() === currentDate.toDateString();
-				} else if (filter === 'week') {
-					const currentWeekStart = new Date(currentDate);
-					currentWeekStart.setDate(currentDate.getDate() - currentDate.getDay());
-					const currentWeekEnd = new Date(currentWeekStart);
-					currentWeekEnd.setDate(currentWeekStart.getDate() + 6);
-
-					showCard = cardDate >= currentWeekStart && cardDate <= currentWeekEnd;
-				} else if (filter === 'month') {
-					showCard = cardDate.getMonth() === currentDate.getMonth() && cardDate.getFullYear() === currentDate.getFullYear();
-				} else if (filter === 'year') {
-					showCard = cardDate.getFullYear() === currentDate.getFullYear();
-				}
-
-				if (!showCard) {
-					card.classList.remove('d-block');
-					card.classList.add('d-none');
-				} else {
-					card.classList.remove('d-none');
-					card.classList.add('d-block');
-				}
-			});
-		}
-		function searchCards() {
-			// Get the search input value
-			var searchValue = document.getElementById('searchInput').value.toLowerCase();
-
-			// Get all cards in the container
-			var cards = document.getElementById('cardsContainer').getElementsByClassName('timeline-card');
-
-			// Loop through each card and show/hide based on the search input
-			for (var i = 0; i < cards.length; i++) {
-				var cardName = cards[i].querySelector('.nav-message').innerText.toLowerCase();
-				if (cardName.indexOf(searchValue) !== -1) {
-					cards[i].classList.remove('d-none');
-					cards[i].classList.add('d-block');
-				} else {
-					cards[i].classList.remove('d-block');
-					cards[i].classList.add('d-none');
-				}
-			}
-		}
-	</script>
+		<!--end::Modal - Invite Friend-->
+		<!--end::Modals-->
+		<!--begin::Javascript-->
+		<script>var hostUrl = "assets/";</script>
+		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Vendors Javascript(used for this page only)-->
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<!--end::Vendors Javascript-->
+		<!--begin::Custom Javascript(used for this page only)-->
+		<script src="assets/js/custom/pages/user-profile/general.js"></script>
+		<script src="assets/js/widgets.bundle.js"></script>
+		<script src="assets/js/custom/widgets.js"></script>
+		<script src="assets/js/custom/apps/chat/chat.js"></script>
+		<script src="assets/js/custom/utilities/modals/upgrade-plan.js"></script>
+		<script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
+		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+		<script src="assets/js/custom/utilities/modals/offer-a-deal/type.js"></script>
+		<script src="assets/js/custom/utilities/modals/offer-a-deal/details.js"></script>
+		<script src="assets/js/custom/utilities/modals/offer-a-deal/finance.js"></script>
+		<script src="assets/js/custom/utilities/modals/offer-a-deal/complete.js"></script>
+		<script src="assets/js/custom/utilities/modals/offer-a-deal/main.js"></script>
+		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+		<!--end::Custom Javascript-->
+		<!--end::Javascript-->
+		
 </body>
 <!--end::Body-->
 
