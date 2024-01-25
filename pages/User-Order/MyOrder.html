@@ -5482,28 +5482,29 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Toolbar-->
 									<div class="card-toolbar m-0">
 										<!--begin::Tab nav-->
-										
-											<div class="d-flex align-items-center position-relative my-1" data-kt-customer-table-toolbar="base">
-									
-												<div class="w-250px me-3">
-													<!--begin::Select2-->
-													<select class="form-select form-select-solid " data-control="select2"  data-placeholder="Status" 
-													onchange="filterTable(this.value)"
+
+										<div class="d-flex align-items-center position-relative my-1"
+											data-kt-customer-table-toolbar="base">
+
+											<div class="w-250px me-3">
+												<!--begin::Select2-->
+												<select class="form-select form-select-solid " data-control="select2"
+													data-placeholder="Status" onchange="filterTable(this.value)"
 													data-kt-ecommerce-order-filter="status">
-														<option></option>
-														<option value="all">All</option>
+													<option></option>
+													<option value="all">All</option>
 													<option value="Open">Open</option>
-															<option value="Pick">Pick</option>
-															<option value="Cancel">Cancel</option>
-															<option value="Waiting">Waiting</option>
-															<option value="Delivered">Delivered</option>
-															<option value="Returned">Returned</option>
-															<option value="Delete">Delete</option>
-													</select>
-														
-													
-											
-										
+													<option value="Pick">Pick</option>
+													<option value="Cancel">Cancel</option>
+													<option value="Waiting">Waiting</option>
+													<option value="Delivered">Delivered</option>
+													<option value="Returned">Returned</option>
+													<option value="Delete">Delete</option>
+												</select>
+
+
+
+
 											</div>
 										</div>
 										<!--end::Tab nav-->
@@ -5518,7 +5519,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Tab panel-->
 										<div class="card-body p-0 tab-pane fade show active" role="tabpanel">
 											<!--begin::Timeline-->
-											<div class="timeline" >
+											<div class="timeline">
 												<!--begin::Timeline item-->
 												<div class=" overflow-auto pb-5" id="cardsContainer">
 													<!--begin::Record-->
@@ -5535,111 +5536,127 @@ License: For each use you must have a valid license purchased only from above li
 													</style>
 													<a href="pages/User-Order/order-details.html">
 														<div class="timeline-card">
-														<div class=" border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
-														<div class="d-flex align-items-center justify-content-between">
-															<div class="d-flex align-items-center">
-																<div class="fs-2x rounded-circle circle-div">
-																	<i class="ki-duotone fs-1 ki-cube-2 text-danger">
-																		<span class="path1"></span>
-																		<span class="path2"></span>
-																		<span class="path3"></span>
-																	</i>
-																</div>
+															<div
+																class=" border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
+																<div
+																	class="d-flex align-items-center justify-content-between">
+																	<div class="d-flex align-items-center">
+																		<div class="fs-2x rounded-circle circle-div">
+																			<i
+																				class="ki-duotone fs-1 ki-cube-2 text-danger">
+																				<span class="path1"></span>
+																				<span class="path2"></span>
+																				<span class="path3"></span>
+																			</i>
+																		</div>
 
-																<div class="ms-4">
+																		<div class="ms-4">
 
-																	<div class="pl-address-item__content-wrap large"
-																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head text-Secondary ">
-																			Shipped To <div id="order-name" class="text-danger fs-3 fw-bold ">Eman</div>
-																			
+																			<div class="pl-address-item__content-wrap large"
+																				data-pl="pl-address-detail">
+																				<div
+																					class="pl-address-item__head text-Secondary ">
+																					Shipped To <div id="order-name"
+																						class="text-danger fs-3 fw-bold ">
+																						Eman</div>
+
+																				</div>
+
+
+
+
 																			</div>
-																			
-																		
 
+
+																		</div>
 
 																	</div>
+																	<div class=" d-flex flex-column align-items-end ">
+																		<span
+																			class="badge border rounded-pill border-2 border-dark text-dark px-5 py-2 fs-5 fw-bold"
+																			id="order-status">
+																			Cancel
+																		</span>
 
-
+																	</div>
 																</div>
-																
+																<div class="mt-1">
+																	<div class="fw-bold">Order Id: <span
+																			class="fw-normal"
+																			id="order-Id">#1234321344</span>
+																	</div>
+																	<div class="fw-bold">Order Date: <span
+																			class="fw-normal"
+																			id="order-date">12-12-2023</span>
+																	</div>
+																</div>
 															</div>
-															<div class=" d-flex flex-column align-items-end ">
-																<span class="badge border rounded-pill border-2 border-dark text-dark px-5 py-2 fs-5 fw-bold" id="order-status">
-																	Cancel
-																</span>
-																
-															</div>
-														</div>
-														<div class="mt-1">
-															<div class="fw-bold">Order Id: <span
-																				class="fw-normal"
-																				id="order-Id">#1234321344</span>
-															</div>
-															<div class="fw-bold">Order Date: <span
-																				class="fw-normal"
-																				id="order-date">12-12-2023</span>
-															</div>
-														</div>
-														</div>
 
-													</div>
-													</a>	
+														</div>
+													</a>
 													<a href="pages/User-Order/order-details.html">
 														<div class="timeline-card">
-														<div class=" border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
-														<div class="d-flex align-items-center justify-content-between">
-															<div class="d-flex align-items-center">
-																<div class="fs-2x rounded-circle circle-div">
-																	<i class="ki-duotone fs-1 ki-cube-2 text-danger">
-																		<span class="path1"></span>
-																		<span class="path2"></span>
-																		<span class="path3"></span>
-																	</i>
-																</div>
+															<div
+																class=" border border-dashed border-gray-300 rounded w-100 px-7 py-3 mb-5">
+																<div
+																	class="d-flex align-items-center justify-content-between">
+																	<div class="d-flex align-items-center">
+																		<div class="fs-2x rounded-circle circle-div">
+																			<i
+																				class="ki-duotone fs-1 ki-cube-2 text-danger">
+																				<span class="path1"></span>
+																				<span class="path2"></span>
+																				<span class="path3"></span>
+																			</i>
+																		</div>
 
-																<div class="ms-4">
+																		<div class="ms-4">
 
-																	<div class="pl-address-item__content-wrap large"
-																		data-pl="pl-address-detail">
-																		<div class="pl-address-item__head text-Secondary ">
-																			Shipped To <div id="order-name" class="text-danger fs-3 fw-bold ">Asma</div>
-																			
+																			<div class="pl-address-item__content-wrap large"
+																				data-pl="pl-address-detail">
+																				<div
+																					class="pl-address-item__head text-Secondary ">
+																					Shipped To <div id="order-name"
+																						class="text-danger fs-3 fw-bold ">
+																						Asma</div>
+
+																				</div>
+
+
+
+
 																			</div>
-																			
-																		
 
+
+																		</div>
 
 																	</div>
+																	<div class=" d-flex flex-column align-items-end ">
+																		<span
+																			class="badge border rounded-pill border-2 border-primary text-primary px-5 py-2 fs-5 fw-bold"
+																			id="order-status">
+																			Pick
+																		</span>
 
-
+																	</div>
 																</div>
-																
+																<div class="mt-1">
+																	<div class="fw-bold">Order Id: <span
+																			class="fw-normal"
+																			id="order-Id">#99887766</span>
+																	</div>
+																	<div class="fw-bold">Order Date: <span
+																			class="fw-normal"
+																			id="order-date">01-01-2024</span>
+																	</div>
+																</div>
 															</div>
-															<div class=" d-flex flex-column align-items-end ">
-																<span class="badge border rounded-pill border-2 border-primary text-primary px-5 py-2 fs-5 fw-bold" id="order-status">
-																	Pick
-																</span>
-																
-															</div>
-														</div>
-														<div class="mt-1">
-															<div class="fw-bold">Order Id: <span
-																				class="fw-normal"
-																				id="order-Id">#99887766</span>
-															</div>
-															<div class="fw-bold">Order Date: <span
-																				class="fw-normal"
-																				id="order-date">01-01-2024</span>
-															</div>
-														</div>
-														</div>
 
-													</div>
-														</a>	
-													
-													
-													
+														</div>
+													</a>
+
+
+
 												</div>
 												<!--end::Timeline-->
 											</div>
@@ -5667,38 +5684,38 @@ License: For each use you must have a valid license purchased only from above li
 		</div>
 		<script>
 			function searchAndFilterCards() {
-    const searchValue = document.getElementById('searchInput').value.toLowerCase();
-    const cards = document.getElementById('cardsContainer').querySelectorAll('.timeline-card');
+				const searchValue = document.getElementById('searchInput').value.toLowerCase();
+				const cards = document.getElementById('cardsContainer').querySelectorAll('.timeline-card');
 
-    cards.forEach(card => {
-        const title = card.querySelector('#order-name').innerText.toLowerCase();
-        const orderId = card.querySelector('#order-Id').innerText.toLowerCase();
-		const orderDate = card.querySelector('#order-date').innerText.toLowerCase();
-        const status = card.querySelector('.badge').innerText.toLowerCase(); // Assuming status is inside a '.badge' element
+				cards.forEach(card => {
+					const title = card.querySelector('#order-name').innerText.toLowerCase();
+					const orderId = card.querySelector('#order-Id').innerText.toLowerCase();
+					const orderDate = card.querySelector('#order-date').innerText.toLowerCase();
+					const status = card.querySelector('.badge').innerText.toLowerCase(); // Assuming status is inside a '.badge' element
 
-        if (title.includes(searchValue) || orderId.includes(searchValue) || status.includes(searchValue) || orderDate.includes(searchValue)) {
-            card.style.display = 'block'; // Show card
-        } else {
-            card.style.display = 'none'; // Hide card
-        }
-    });
-}
-function filterTable(selectedStatus) {
-    const cards = document.querySelectorAll('.timeline-card');
+					if (title.includes(searchValue) || orderId.includes(searchValue) || status.includes(searchValue) || orderDate.includes(searchValue)) {
+						card.style.display = 'block'; // Show card
+					} else {
+						card.style.display = 'none'; // Hide card
+					}
+				});
+			}
+			function filterTable(selectedStatus) {
+				const cards = document.querySelectorAll('.timeline-card');
 
-    cards.forEach(card => {
-        const cardStatus = card.querySelector('.badge').textContent.trim().toLowerCase();
+				cards.forEach(card => {
+					const cardStatus = card.querySelector('.badge').textContent.trim().toLowerCase();
 
-        if (selectedStatus === 'all' || cardStatus === selectedStatus.toLowerCase()) {
-            card.style.display = 'block'; // Show card
-        } else {
-            card.style.display = 'none'; // Hide card
-        }
-    });
-}
+					if (selectedStatus === 'all' || cardStatus === selectedStatus.toLowerCase()) {
+						card.style.display = 'block'; // Show card
+					} else {
+						card.style.display = 'none'; // Hide card
+					}
+				});
+			}
 
 
-		
+
 		</script>
 
 		<div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
@@ -6235,7 +6252,7 @@ function filterTable(selectedStatus) {
 		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
-		
+
 </body>
 <!--end::Body-->
 
