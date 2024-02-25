@@ -5,17 +5,26 @@ jQuery(document).ready(function() {
 		var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
 		var next = jQuery(this);
 		var nextWizardStep = true;
-		parentFieldset.find('.wizard-required').each(function(){
-			var thisValue = jQuery(this).val();
+		parentFieldset.find('.wizard-required').each(function () {
+            var thisValue = jQuery(this).val();
+            if (thisValue == "") {
+                jQuery(this).siblings(".wizard-form-error").slideDown();
+                nextWizardStep = false;
+            }
+            else {
+                jQuery(this).siblings(".wizard-form-error").slideUp();
+            }
+        });
 
-			if( thisValue == "") {
-				jQuery(this).siblings(".wizard-form-error").slideDown();
-				nextWizardStep = false;
-			}
-			else {
+		parentFieldset.find('.wizard-email').each(function () {
+            var email = jQuery(this).val();
+            if (email.trim() !== '' && !isValidEmail(email)) {
+                jQuery(this).siblings(".wizard-form-error").text("Please enter a valid email address.").slideDown();
+                nextWizardStep = false;
+            }else {
 				jQuery(this).siblings(".wizard-form-error").slideUp();
 			}
-		});
+        });
 		if( nextWizardStep) {
 			next.parents('.wizard-fieldset').removeClass("show","400");
 			currentActiveStep.removeClass('active').addClass('activated').next().addClass('active',"400");
