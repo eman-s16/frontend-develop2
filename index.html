@@ -5,7 +5,7 @@
 
 <head>
 	<base href="" />
-	<title>Metronic - The World's #1 Selling Bootstrap Admin Template by Keenthemes</title>
+	<title>Index</title>
 	<meta charset="utf-8" />
 	<meta name="description"
 		content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
@@ -31,9 +31,61 @@
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Stylesheets Bundle-->
 	<script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+<style>
+	
+
+	.status-icon-custom {
+		margin-right: 5px;
+	}
+ .card-custom {
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 15px;
+   
+  }
+	.input-group-custom {
+		display: flex;
+		width: 100%;
+	}
+
+	.form-control-custom {
+		flex: 1;
+		border-radius: 4px;
+		border: 1px solid #ced4da;
+		padding: 6px 12px;
+	}
+
+	.btn-custom {
+		border-radius: 4px;
+		padding: 6px 12px;
+		margin-left: -1px;
+		background-color: #007bff;
+		color: #fff;
+		border: 1px solid #007bff;
+	}
+ .fas.fa-search {
+	color: white !important;
+}
+	.btn:hover {
+		background-color: #0056b3;
+		border-color: #0056b3;
+	}
+.btn-custom:hover .fas.fa-search {
+	color: black !important;
+}
+	.btn-custom:focus {
+		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+	}
+
+	.btn-custom:focus-visible {
+		box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+	}
+	 .card-error {
+    border: 2px solid red;
+  }
+</style>
 </head>
 <!--end::Head-->
-<!--begin::Body-->
+<!--begin::Body-->6
 
 <body id="kt_body" class="page-bg">
 	<!--begin::Theme mode setup on page load-->
@@ -54,7 +106,7 @@
 						<div class="d-flex flex-center pt-10 pt-lg-0 mb-10 mb-lg-0 h-lg-150px">
 
 							<a href="index.html">
-								<img alt="Logo" src="assets/media/logos/default-small.svg" class="h-70px" />
+								<img alt="Logo" src="assets/img/logo.png" class="h-70px" />
 							</a>
 							<!--end::Logo-->
 						</div>
@@ -106,7 +158,7 @@
 										<!--end::Wrapper-->
 										
 										<!--begin::Illustrations-->
-										<img class="mw-100 h-225px mx-auto mb-lg-n18"
+										<img class="mw-100 h-225px mx-auto mb-lg-n18" alt=""
 											src="assets/media/illustrations/sigma-1/12.png" />
 										<!--end::Illustrations-->
 									</div>
@@ -128,7 +180,7 @@
 											<!--begin::Card body-->
 											<div class="card-body d-flex flex-column flex-center text-center">
 												<!--begin::Illustrations-->
-												<img class="mw-100 h-100px mb-7 mx-auto"
+												<img class="mw-100 h-100px mb-7 mx-auto" alt=""
 													src="assets/media/illustrations/misc/credit-card.png" />
 												<!--end::Illustrations-->
 												<!--begin::Heading-->
@@ -168,24 +220,24 @@
 									<!--begin::Card body-->
 									<div class="card-body d-flex flex-center flex-wrap">
 										<!--begin::Illustrations-->
-										<img class="mw-100 h-200px me-4 mb-5 mb-lg-0"
+										<img class="mw-100 h-200px me-4 mb-5 mb-lg-0" alt=""
 											src="assets/img/trakc2.png" />
 										<!--end::Illustrations-->
 										<!--begin::Wrapper-->
 										<div class="d-flex flex-column align-items-center align-items-md-start flex-grow-1"
 											data-bs-theme="light">
 											<!--begin::Heading-->
-											<h3 class="text-gray-900 fw-bolder text-uppercase mb-5">Order Tacking</h3>
+											<h3 class="text-gray-900 fw-bolder text-uppercase mb-5">Order Tracking</h3>
 											<!--end::Heading-->
 											<!--begin::List-->
-											<div class="text-gray-800 mb-5 text-center text-md-start">Provide real-time updates
-												<br /> on delivery status
+											<div class="text-gray-800 mb-5 text-center text-md-start">Track your Order
+											<br> to get updates <br> on delivery status
 											</div>
 											<!--end::List-->
 											<!--begin::Link-->
-											<a href="pages/Categories/Order-Tacking.html"
+											<a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_history"
 												class="btn btn-hover-rise text-gray-900 text-uppercase fs-7 fw-bold"
-												style="background-color: #EBEE51">View Order Tacking</a>
+												style="background-color: #EBEE51">View Order Tracking</a>
 											<!--end::Link-->
 										</div>
 										<!--end::Wrapper-->
@@ -420,8 +472,8 @@
 				<!--begin::Modal body-->
 				<div class="modal-body scroll-y m-5">
 					<!--begin::Stepper-->
-					<div class="stepper stepper-links d-flex flex-column" id="kt_create_account_stepper">
-						<div class="card card-flush " style="max-height: 450px;">
+					<div class="stepper stepper-links d-flex flex-column" style="max-height: 450px;" id="kt_create_account_stepper">
+						<div class="card card-flush " >
 										<!--begin::Header-->
 										<div class="card-header pt-7     justify-content-center">
 											<!--begin::Title-->
@@ -605,6 +657,65 @@
 		</div>
 		<!--end::Modal dialog-->
 	</div>
+	<div class="modal fade" id="kt_modal_history" tabindex="-1" aria-hidden="true">
+		<!--begin::Modal dialog-->
+		<div class="modal-dialog  p-9">
+			<!--begin::Modal content-->
+			<div class="modal-content">
+				<!--begin::Modal header-->
+				<div class="modal-header header-bg">
+					<!--begin::Modal title-->
+					<h2 class="text-white">
+						Order Tracking
+					</h2>
+					<!--end::Modal title-->
+					<!--begin::Close-->
+					<div class="btn btn-sm btn-icon btn-color-white btn-active-color-primary" data-bs-dismiss="modal">
+						<i class="ki-duotone ki-cross fs-1">
+							<span class="path1"></span>
+							<span class="path2"></span>
+						</i>
+					</div>
+					<!--end::Close-->
+				</div>
+				<!--end::Modal header-->
+				<!--begin::Modal body-->
+				<div class="modal-body scroll-y m-5">
+					<!--begin::Stepper-->
+					<div class="stepper stepper-links d-flex flex-column" id="kt_create_account_stepper">
+							<div class=" container-custom">
+								<h2>Track Your Order</h2>
+								<div class="form-group form-group-custom">
+									<label for="trackingNumber">Enter Tracking Number:</label>
+									<div class="input-group input-group-custom">
+										<input type="text" class="form-control form-control-custom" id="trackingNumber">
+										<div class="input-group-append">
+											<button class="btn btn-custom btn-outline-primary" type="button" onclick="trackOrder()"><i
+													class="fas fa-search"></i> Track</button>
+										</div>
+									</div>
+									<small id="errorText" class="text-danger" style="display: none;">Please enter a tracking number.</small>
+								</div>
+								<div id="orderStatus" class="mt-3" style="display: none;">
+									<div class="card card-custom" id="statusCard">
+										<div class="card-body">
+											<h4 class="card-title">Order Status</h4>
+											<p class="card-text" id="statusMessage"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						
+					</div>
+					<!--end::Stepper-->
+				</div>
+				<!--end::Modal body-->
+			</div>
+			<!--end::Modal content-->
+		</div>
+		<!--end::Modal dialog-->
+	</div>
 	<!--end::Modal - Create project-->
 	<!--end::Modals-->
 	<!--begin::Javascript-->
@@ -639,6 +750,60 @@
 	<script src="assets/js/custom/utilities/modals/create-account.js"></script>
 	<!--end::Custom Javascript-->
 	<!--end::Javascript-->
+	<script>
+		var orders = [
+			{ trackingNumber: "123456", status: "shipped" },
+			{ trackingNumber: "789012", status: "processing" },
+			{ trackingNumber: "345678", status: "delivered" }
+		];
+
+		function trackOrder() {
+			var trackingNumber = document.getElementById("trackingNumber").value.trim();
+			var errorTextElement = document.getElementById("errorText");
+			var statusMessageElement = document.getElementById("statusMessage");
+			var orderStatusElement = document.getElementById("orderStatus");
+			var statusCardElement = document.getElementById("statusCard");
+
+			// Validate input
+			if (!trackingNumber) {
+				errorTextElement.style.display = "block";
+				document.getElementById("trackingNumber").classList.add("is-invalid");
+				return;
+			} else {
+				errorTextElement.style.display = "none";
+				document.getElementById("trackingNumber").classList.remove("is-invalid");
+			}
+
+			var orderStatus = getOrderStatus(trackingNumber);
+
+			if (orderStatus) {
+				var statusIcon;
+				if (orderStatus === 'shipped') {
+					statusIcon = '<i class="fas fa-shipping-fast status-icon  pe-2 text-primary"></i>';
+				} else if (orderStatus === 'processing') {
+					statusIcon = '<i class="fas fa-spinner status-icon  pe-2 text-primary"></i>';
+				} else if (orderStatus === 'delivered') {
+					statusIcon = '<i class="fas fa-check-circle status-icon  pe-2 text-success"></i>';
+				}
+
+				statusMessageElement.innerHTML = statusIcon + "Your order with tracking number " + trackingNumber + " is " + orderStatus;
+				orderStatusElement.style.display = "block";
+				statusCardElement.classList.remove("card-error"); 
+			} else {
+				statusMessageElement.innerHTML = "<i class='fas fa-exclamation-circle status-icon pe-2 text-danger'></i>No order found with tracking number " + trackingNumber;
+				orderStatusElement.style.display = "block";
+				statusCardElement.classList.add("card-error"); 
+			}
+		}
+
+		function getOrderStatus(trackingNumber) {
+			var foundOrder = orders.find(function (order) {
+				return order.trackingNumber === trackingNumber;
+			});
+
+			return foundOrder ? foundOrder.status : null;
+		}
+	</script>
 </body>
 <!--end::Body-->
 
